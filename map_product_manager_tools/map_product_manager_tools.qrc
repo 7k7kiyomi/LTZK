@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/map_product_manager_tools">
+        <file alias="icon_db_config.svg">images/icon_db_config.svg</file>
+        <file alias="icon_product_storage.svg">images/icon_product_storage.svg</file>
+        <file alias="icon_metadata.svg">images/icon_metadata.svg</file>
+        <file alias="icon_product_search.svg">images/icon_product_search.svg</file>
+        <file alias="icon_version_diff.svg">images/icon_version_diff.svg</file>
+        <file alias="icon_access_control.svg">images/icon_access_control.svg</file>
+        <file alias="icon_login.svg">images/icon_login.svg</file>
+        <file alias="icon_map_service.svg">images/icon_map_service.svg</file>
+        <file alias="icon_theme_manager.svg">images/icon_theme_manager.svg</file>
+    </qresource>
+</RCC>

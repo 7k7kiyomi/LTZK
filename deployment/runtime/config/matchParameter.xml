@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- M458 综合前后匹配参数（QGIS 本地缓冲匹配，成果为投影坐标，单位米）：
+     BufferDistance  缓冲匹配距离（米）
+     MinOverlapRatio 重叠面积/长度比低于该值视为未匹配（0~1）
+     MaxChangeRatio  面积/长度变化率超过该值视为显著变形（0~1，0.3=30%）
+     MaxVertexChange 顶点数变化超过该值视为显著变形（个）
+     —— 以下为「综合前后拓扑检查」组补充参数（M460，同样供M458使用） ——
+     MaxDisplacement  过度偏移阈值（米）：中心位移/端点位移超过该值报"道路过度偏移"
+     MaxSinuosityDrop 弯曲度下降阈值：线弯曲度(线长/首尾直线距离)较综合前下降超过该值报"道路拉直异常"
+     ConnectTolerance 连通判定容差（米）：综合前后端点间距小于该值视为相接，断裂判定按此容差
+     LongGapThreshold 长距离断口阈值（米）：综合后断口大于该值报"道路长距离连接"，否则报"道路·河流断裂"
+     PointRoadTolerance ①居民点与道路容差（米）：居民点距最近道路≤该值视为"已压盖"不报
+                        （0.29米这类贴边噪声不再输出；0=不过滤，全部按未压盖报出）
+     RoadLayerKeywords  M460检查的道路图层名单（名称包含匹配，逗号分隔，含铁路）
+     RiverLayerKeywords M460检查的河流/渠图层名单（只参与②③断裂；注记/代码类自动排除）
+     参数按数据情况调整，改完直接生效，无需重新编译 -->
+<MapGeneBatchProcessing>
+    <Mission id="458">
+        <Parameter>
+            <BufferDistance>10</BufferDistance>
+            <MinOverlapRatio>0.5</MinOverlapRatio>
+            <MaxChangeRatio>0.3</MaxChangeRatio>
+            <MaxVertexChange>10</MaxVertexChange>
+            <MaxDisplacement>100</MaxDisplacement>
+            <MaxSinuosityDrop>0.2</MaxSinuosityDrop>
+            <ConnectTolerance>1.0</ConnectTolerance>
+            <LongGapThreshold>100</LongGapThreshold>
+            <!-- ① 居民点与道路拓扑容差（米）：居民点距最近道路≤该值视为"已压盖"不报
+                 （贴边噪声不再输出；0=不过滤，全部按未压盖报出） -->
+            <PointRoadTolerance>10</PointRoadTolerance>
+            <!-- M460 检查图层范围（名称包含匹配，逗号分隔）：道路图层参与②~⑦（含铁路）；
+                 河流/渠图层仅参与②③断裂；*名称/代码/注记等注记类图层程序自动排除 -->
+            <RoadLayerKeywords>国道,省道,县道,乡道,村道,专用道,高速公路,高速铁路,普通铁路</RoadLayerKeywords>
+            <RiverLayerKeywords>河流,干渠,支渠</RiverLayerKeywords>
+        
+            <MinBreakGap>50</MinBreakGap>
+            <MaxOutsideRatio>0.2</MaxOutsideRatio>
+            <TunnelPortalTolerance>5</TunnelPortalTolerance>
+            <RightAngleMinAngle>70</RightAngleMinAngle>
+            <RightAngleMaxAngle>110</RightAngleMaxAngle>
+            <RightAngleOrigMaxTurn>30</RightAngleOrigMaxTurn>
+            <RightAngleMinSegment>5</RightAngleMinSegment>
+            <RightAngleSearchRadius>60</RightAngleSearchRadius>
+            <EndpointBuffer>50</EndpointBuffer>
+            <BoundaryTolerance>50</BoundaryTolerance>
+            <PointSideTolerance>100</PointSideTolerance>
+            <MinSimplifyVertexCount>20</MinSimplifyVertexCount>
+            <MinVertexReduceRatio>0.05</MinVertexReduceRatio>
+            <MaxLocalBulge>20</MaxLocalBulge>
+            <MaxLocalDeviation>20</MaxLocalDeviation></Parameter>
+    </Mission>
+</MapGeneBatchProcessing>

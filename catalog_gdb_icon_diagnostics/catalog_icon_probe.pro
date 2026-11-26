@@ -1,0 +1,12 @@
+TEMPLATE = app
+TARGET = catalog_icon_probe
+CONFIG += console c++17 release
+CONFIG -= debug debug_and_release
+QT += widgets sql xml svg network
+INCLUDEPATH += .. E:/extern/QGIS_32815/include
+SOURCES += catalog_icon_probe.cpp ../DataCatalogWidget.cpp ../DataCatalogProductCatalog.cpp ../PlatformMenuDatabaseConnectionObserver.cpp
+RESOURCES += ../LTZK.qrc
+LIBS += -LE:/extern/QGIS_32815/lib -lqgis_core -lqgis_gui
+QMAKE_CXXFLAGS += /utf-8
+DEFINES += _USE_MATH_DEFINES
+INCLUDEPATH += E:/extern/OSGeo4W_32815/include

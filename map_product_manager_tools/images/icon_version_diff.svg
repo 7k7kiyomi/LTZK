@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 版本回溯与差异比对 - 分支/版本图标 -->
+  <circle cx="6" cy="6" r="2.5" fill="none" stroke="#FF6B6B" stroke-width="1.5"/>
+  <circle cx="18" cy="12" r="2.5" fill="none" stroke="#5B8FF9" stroke-width="1.5"/>
+  <circle cx="6" cy="18" r="2.5" fill="none" stroke="#61DDAA" stroke-width="1.5"/>
+  <path d="M6 8.5v7M6 8.5c0 0 6 1 10.5 3.5M6 15.5c0 0 6-1 10.5-3.5" fill="none" stroke="#999" stroke-width="1.2"/>
+</svg>

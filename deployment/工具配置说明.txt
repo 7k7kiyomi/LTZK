@@ -1,0 +1,47 @@
+LTZK工具配置说明
+
+一、目录结构
+
+LTZK\
+  bin\LTZK.exe
+  plugins\plugin_map_quality_check_tools.dll
+  config\plugin_bindings.json
+  resources\
+  QGIS_32815\
+  OSGeo4W_32815\
+  .env
+  start_LTZK.bat
+
+二、运行环境配置
+
+如果 QGIS_32815 和 OSGeo4W_32815 放在 LTZK 目录下，.env 保持默认即可：
+
+QGIS_PREFIX_PATH=QGIS_32815
+OSGEO4W_ROOT=OSGeo4W_32815
+
+start_LTZK.bat 会自动按脚本所在目录解析相对路径。例如软件解压到 D:\LTZK，则会自动识别为：
+
+D:\LTZK\QGIS_32815
+D:\LTZK\OSGeo4W_32815
+
+如果运行环境不放在 LTZK 目录下，也可以把 .env 改成绝对路径：
+
+QGIS_PREFIX_PATH=E:\extern\QGIS_32815
+OSGEO4W_ROOT=E:\extern\OSGeo4W_32815
+
+三、启动方式
+
+请双击 start_LTZK.bat 启动软件。
+不建议直接双击 bin\LTZK.exe，因为直接启动不会读取 .env，也不会自动配置 Qt、QGIS、GDAL、PROJ 等路径。
+
+四、插件说明
+
+插件 DLL 放在 plugins 目录。
+功能与插件的对应关系写在 config\plugin_bindings.json。
+
+例如：
+
+图幅接边与系列化表达 -> plugin_map_quality_check_tools.dll -> 插件中包含“图幅”“系列”的动作
+
+如果以后替换 DLL 或新增功能，优先修改 config\plugin_bindings.json，不需要在源码中写死功能和 DLL 的对应关系。
+修改配置或替换 DLL 后，建议重启软件生效。

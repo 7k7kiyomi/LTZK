@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThemeAddDialog</class>
+ <widget class="QDialog" name="ThemeAddDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>190</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>添加主题</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QGroupBox" name="themeGroup">
+     <property name="title">
+      <string>主题信息</string>
+     </property>
+     <layout class="QFormLayout" name="themeForm">
+      <item row="0" column="0">
+       <widget class="QLabel" name="dataCategoryLabel">
+        <property name="text">
+         <string>数据类别:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="mDataCategoryCombo">
+        <item>
+         <property name="text">
+          <string>矢量数据</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>栅格数据</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AI文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CDR文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PDF文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CAD文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>文档文件</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>其它</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="themeNameLabel">
+        <property name="text">
+         <string>主题类别:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="mThemeNameCombo">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <property name="placeholderText">
+         <string>输入新的主题类别，或下拉选择已有主题</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="btnLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mOkBtn">
+       <property name="text">
+        <string>确定</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="mCancelBtn">
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

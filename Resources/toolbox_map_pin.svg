@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img">
+  <title>地图定位针与图层网格工具箱图标</title>
+  <defs>
+    <linearGradient id="baseFill" x1="224" y1="160" x2="800" y2="864" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B3D70"/>
+      <stop offset="1" stop-color="#071D3A"/>
+    </linearGradient>
+    <linearGradient id="pinFill" x1="360" y1="244" x2="672" y2="748" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1CCFFF"/>
+      <stop offset="1" stop-color="#087FC8"/>
+    </linearGradient>
+    <clipPath id="gridClip">
+      <circle cx="512" cy="512" r="382"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="512" cy="512" r="462" fill="url(#baseFill)" stroke="#55D9FF" stroke-width="24"/>
+
+  <g clip-path="url(#gridClip)" fill="none" stroke="#BCEEFF" stroke-width="18" opacity="0.72" stroke-linecap="round">
+    <path d="M130 512h764"/>
+    <path d="M164 360h696"/>
+    <path d="M164 664h696"/>
+    <path d="M512 124v776"/>
+    <path d="M360 164c108 116 108 580 0 696"/>
+    <path d="M664 164c-108 116-108 580 0 696"/>
+  </g>
+
+  <path
+    d="M512 204c-126 0-228 102-228 228 0 161 177 323 211 353a25 25 0 0 0 34 0c34-30 211-192 211-353 0-126-102-228-228-228Zm0 126a102 102 0 1 1 0 204 102 102 0 0 1 0-204Z"
+    fill="url(#pinFill)"
+    fill-rule="evenodd"
+    stroke="#F0FCFF"
+    stroke-width="22"
+    stroke-linejoin="round"/>
+
+  <path
+    d="M382 478 474 414l88 54 96-112"
+    fill="none"
+    stroke="#F8FDFF"
+    stroke-width="30"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  <circle cx="382" cy="478" r="27" fill="#F8FDFF"/>
+  <circle cx="562" cy="468" r="27" fill="#F8FDFF"/>
+  <circle cx="658" cy="356" r="27" fill="#F8FDFF"/>
+</svg>

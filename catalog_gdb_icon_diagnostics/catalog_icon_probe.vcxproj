@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid></ProjectGuid>
+    <RootNamespace>catalog_icon_probe</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <PrimaryOutput>catalog_icon_probe</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">.\</OutDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">catalog_icon_probe</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..;..\..\extern\QGIS_32815\include;..\..\extern\OSGeo4W_32815\include;..\..\extern\OSGeo4W_32815\apps\Qt5\include;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtANGLE;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;..\..\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;.;..\..\extern\OSGeo4W_32815\apps\Qt5\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>.\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_USE_MATH_DEFINES;NDEBUG;QT_NO_DEBUG;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>E:\extern\QGIS_32815\lib\qgis_core.lib;E:\extern\QGIS_32815\lib\qgis_gui.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Svg.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Widgets.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Gui.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Sql.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Xml.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Network.lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib\Qt5Core.lib;mfuuid.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\extern\QGIS_32815\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\catalog_icon_probe.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;_USE_MATH_DEFINES;NDEBUG;QT_NO_DEBUG;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DataCatalogProductCatalog.cpp" />
+    <ClCompile Include="..\DataCatalogWidget.cpp" />
+    <ClCompile Include="..\PlatformMenuDatabaseConnectionObserver.cpp" />
+    <ClCompile Include="catalog_icon_probe.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">..\..\extern\OSGeo4W_32815\apps\Qt5\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">cl -BxE:\extern\OSGeo4W_32815\apps\Qt5\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /utf-8 -O2 -MD -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\extern\OSGeo4W_32815\apps\Qt5\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClCompile Include="qrc_LTZK.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\LTZK.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">..\LTZK.qrc;E:\extern\OSGeo4W_32815\apps\Qt5\bin\rcc.exe;..\Resources\icon_intelligent_generalization.svg;..\Resources\icon_db_config.svg;..\Resources\mActionFilter.svg;..\Resources\template_icon_logout.svg;..\Resources\home_login_background.png;..\Resources\module_map_achievement.png;..\Resources\mActionHideDeselectedLayers.svg;..\Resources\icon_intelligent_merge.svg;..\Resources\mActionQualitySchemeConfig.svg;..\Resources\mActionNewBookmark.svg;..\Resources\mActionRollbackAllEdits.svg;..\Resources\mActionSelectAll.svg;..\Resources\mIconColorWheel.svg;..\Resources\mActionZoomToSelected.svg;..\Resources\mActionAttributes.svg;..\Resources\tree_branch_open_dark_theme.svg;..\Resources\mActionZoomNext.svg;..\Resources\mActionRenameLayer.svg;..\Resources\icon_intelligent_backup.svg;..\Resources\mActionToggleEditing.svg;..\Resources\mActionMapDataPreprocess.svg;..\Resources\mIconLayerTree.svg;..\Resources\mActionMeasure.svg;..\Resources\mActionInvertSelection.svg;..\Resources\mActionRollbackEdits.svg;..\Resources\mActionCaptureLine.svg;..\Resources\icon_intelligent_database.svg;..\Resources\LTZK.svg;..\Resources\mActionZoomFullExtent.svg;..\Resources\icon_intelligent_metadata.svg;..\Resources\mActionCancelAllEdits.svg;..\Resources\mSourceFields.svg;..\Resources\splash.png;..\Resources\mActionSheetEdgeSeries.svg;..\Resources\mIconFolderLink.svg;..\Resources\icon_intelligent_convert.svg;..\Resources\mActionSelect.svg;..\Resources\mActionFilter2.svg;..\Resources\icon_map_service.svg;..\Resources\mActionZoomIn.svg;..\Resources\mActionFeatureCount.svg;..\Resources\mActionZoomOut.svg;..\Resources\toolbox_map_pin.svg;..\Resources\icon_product_search.svg;..\Resources\mActionFileOpen.svg;..\Resources\mActionCapturePolygon.svg;..\Resources\mActionMoveItemsToBottom.svg;..\Resources\mActionMapLayoutConfig.svg;..\Resources\mActionAddRasterLayer.svg;..\Resources\mActionScaleAccuracy.svg;..\Resources\mActionDuplicateLayer.svg;..\Resources\mActionAddWcsLayer.svg;..\Resources\mActionIdentify.svg;..\Resources\icon_metadata.svg;..\Resources\icon_intelligent_download.svg;..\Resources\mActionFileSave.svg;..\Resources\tree_branch_closed_light_theme.svg;..\Resources\mActionToggleAllLayers.svg;..\Resources\icon_intelligent_quality.svg;..\Resources\mActionAddWfsLayer.svg;..\Resources\mActionAddOgrLayer.svg;..\Resources\icon_product_storage.svg;..\Resources\mActionVertexTool.svg;..\Resources\mActionUnlink.svg;..\Resources\mActionHideAllLayers.svg;..\Resources\mActionAddWmsLayer.svg;..\Resources\mActionAddGroup.svg;..\Resources\mActionGroupItems.svg;..\Resources\icon_intelligent_import.svg;..\Resources\home_white_background.png;..\Resources\icon_theme_manager.svg;..\Resources\tree_checkbox_checked.svg;..\Resources\icon_intelligent_edge.svg;..\Resources\template_icon_return_home.svg;..\Resources\combo_arrow_light.svg;..\Resources\icon_version_diff.svg;..\Resources\icon_data_import.svg;..\Resources\mActionCollapseTree.svg;..\Resources\mActionRefresh.svg;..\Resources\mActionZoomToArea.svg;..\Resources\mActionRemoveLayer.svg;..\Resources\mActionUndo.svg;..\Resources\mActionExport.svg;..\Resources\mActionDeselectAll.svg;..\Resources\mActionPan.svg;..\Resources\mActionMeasureAngle.svg;..\Resources\mActionFileNew.svg;..\Resources\mActionQualityReportExport.svg;..\Resources\mActionDeleteSelectedFeatures.svg;..\Resources\mActionMeasureArea.svg;..\Resources\mActionHideSelectedLayers.svg;..\Resources\mActionCapturePoint.svg;..\Resources\mActionShowAllLayers.svg;..\Resources\combo_arrow_dark.svg;..\Resources\mActionSaveAllEdits.svg;..\Resources\tree_branch_closed_dark_theme.svg;..\Resources\mActionFileSaveAs.svg;..\Resources\module_map_service.png;..\Resources\mActionRemove.svg;..\Resources\mActionAllEdits.svg;..\Resources\mActionShowBookmarks.svg;..\Resources\mActionZoomLast.svg;..\Resources\module_access_control.png;..\Resources\mActionQualityTaskManager.svg;..\Resources\module_map_generalization.png;..\Resources\mActionAddPolygon.svg;..\Resources\mActionZoomToLayer.svg;..\Resources\mActionShowSelectedLayers.svg;..\Resources\mActionRedo.svg;..\Resources\mActionSaveEdits.svg;..\Resources\mIconProperties.svg;..\Resources\mActionInOverview.svg;..\Resources\mActionUngroupItems.svg;..\Resources\mActionZoomActual.svg;..\Resources\mActionExpandTree.svg;..\Resources\tree_branch_open_light_theme.svg;..\Resources\mActionMoveItemsToTop.svg;..\Resources\mActionCancelEdits.svg;..\Resources\module_map_quality.png;..\Resources\home_black_background.png;..\Resources\catalog_icons\spreadsheet.svg;..\Resources\catalog_icons\table.svg;..\Resources\catalog_icons\point.svg;..\Resources\catalog_icons\database.svg;..\Resources\catalog_icons\document.svg;..\Resources\catalog_icons\ai.svg;..\Resources\catalog_icons\pdf.svg;..\Resources\catalog_icons\results.svg;..\Resources\catalog_icons\file.svg;..\Resources\catalog_icons\raster.svg;..\Resources\catalog_icons\hillshade.svg;..\Resources\catalog_icons\feature_set.svg;..\Resources\catalog_icons\elements.svg;..\Resources\catalog_icons\line.svg;..\Resources\catalog_icons\polygon.svg;..\Resources\catalog_icons\materials.svg;..\Resources\catalog_icons\folder.svg;..\Resources\catalog_icons\other.svg;..\Resources\catalog_icons\imagery.svg;..\Resources\styles\ltzk_field_notes.qss;..\Resources\styles\ltzk_steel_warm_white.qss;..\Resources\styles\ltzk_white.qss;..\Resources\styles\ltzk_black.qss;..\Resources\styles\ltzk_sci_fi.qss;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">E:\extern\OSGeo4W_32815\apps\Qt5\bin\rcc.exe -name LTZK ..\LTZK.qrc -o qrc_LTZK.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">RCC ../LTZK.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">qrc_LTZK.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\Resources\LTZK.svg" />
+    <None Include="..\Resources\catalog_icons\ai.svg" />
+    <None Include="..\Resources\combo_arrow_dark.svg" />
+    <None Include="..\Resources\combo_arrow_light.svg" />
+    <None Include="..\Resources\catalog_icons\database.svg" />
+    <None Include="..\Resources\catalog_icons\document.svg" />
+    <None Include="..\Resources\catalog_icons\elements.svg" />
+    <None Include="..\Resources\catalog_icons\feature_set.svg" />
+    <None Include="..\Resources\catalog_icons\file.svg" />
+    <None Include="..\Resources\catalog_icons\folder.svg" />
+    <None Include="..\Resources\catalog_icons\hillshade.svg" />
+    <None Include="..\Resources\home_black_background.png" />
+    <None Include="..\Resources\home_login_background.png" />
+    <None Include="..\Resources\home_white_background.png" />
+    <None Include="..\Resources\icon_data_import.svg" />
+    <None Include="..\Resources\icon_db_config.svg" />
+    <None Include="..\Resources\icon_intelligent_backup.svg" />
+    <None Include="..\Resources\icon_intelligent_convert.svg" />
+    <None Include="..\Resources\icon_intelligent_database.svg" />
+    <None Include="..\Resources\icon_intelligent_download.svg" />
+    <None Include="..\Resources\icon_intelligent_edge.svg" />
+    <None Include="..\Resources\icon_intelligent_generalization.svg" />
+    <None Include="..\Resources\icon_intelligent_import.svg" />
+    <None Include="..\Resources\icon_intelligent_merge.svg" />
+    <None Include="..\Resources\icon_intelligent_metadata.svg" />
+    <None Include="..\Resources\icon_intelligent_quality.svg" />
+    <None Include="..\Resources\icon_map_service.svg" />
+    <None Include="..\Resources\icon_metadata.svg" />
+    <None Include="..\Resources\icon_product_search.svg" />
+    <None Include="..\Resources\icon_product_storage.svg" />
+    <None Include="..\Resources\icon_theme_manager.svg" />
+    <None Include="..\Resources\icon_version_diff.svg" />
+    <None Include="..\Resources\catalog_icons\imagery.svg" />
+    <None Include="..\Resources\catalog_icons\line.svg" />
+    <None Include="..\Resources\styles\ltzk_black.qss" />
+    <None Include="..\Resources\styles\ltzk_field_notes.qss" />
+    <None Include="..\Resources\styles\ltzk_sci_fi.qss" />
+    <None Include="..\Resources\styles\ltzk_steel_warm_white.qss" />
+    <None Include="..\Resources\styles\ltzk_white.qss" />
+    <None Include="..\Resources\mActionAddGroup.svg" />
+    <None Include="..\Resources\mActionAddOgrLayer.svg" />
+    <None Include="..\Resources\mActionAddPolygon.svg" />
+    <None Include="..\Resources\mActionAddRasterLayer.svg" />
+    <None Include="..\Resources\mActionAddWcsLayer.svg" />
+    <None Include="..\Resources\mActionAddWfsLayer.svg" />
+    <None Include="..\Resources\mActionAddWmsLayer.svg" />
+    <None Include="..\Resources\mActionAllEdits.svg" />
+    <None Include="..\Resources\mActionAttributes.svg" />
+    <None Include="..\Resources\mActionCancelAllEdits.svg" />
+    <None Include="..\Resources\mActionCancelEdits.svg" />
+    <None Include="..\Resources\mActionCaptureLine.svg" />
+    <None Include="..\Resources\mActionCapturePoint.svg" />
+    <None Include="..\Resources\mActionCapturePolygon.svg" />
+    <None Include="..\Resources\mActionCollapseTree.svg" />
+    <None Include="..\Resources\mActionDeleteSelectedFeatures.svg" />
+    <None Include="..\Resources\mActionDeselectAll.svg" />
+    <None Include="..\Resources\mActionDuplicateLayer.svg" />
+    <None Include="..\Resources\mActionExpandTree.svg" />
+    <None Include="..\Resources\mActionExport.svg" />
+    <None Include="..\Resources\mActionFeatureCount.svg" />
+    <None Include="..\Resources\mActionFileNew.svg" />
+    <None Include="..\Resources\mActionFileOpen.svg" />
+    <None Include="..\Resources\mActionFileSave.svg" />
+    <None Include="..\Resources\mActionFileSaveAs.svg" />
+    <None Include="..\Resources\mActionFilter.svg" />
+    <None Include="..\Resources\mActionFilter2.svg" />
+    <None Include="..\Resources\mActionGroupItems.svg" />
+    <None Include="..\Resources\mActionHideAllLayers.svg" />
+    <None Include="..\Resources\mActionHideDeselectedLayers.svg" />
+    <None Include="..\Resources\mActionHideSelectedLayers.svg" />
+    <None Include="..\Resources\mActionIdentify.svg" />
+    <None Include="..\Resources\mActionInOverview.svg" />
+    <None Include="..\Resources\mActionInvertSelection.svg" />
+    <None Include="..\Resources\mActionMapDataPreprocess.svg" />
+    <None Include="..\Resources\mActionMapLayoutConfig.svg" />
+    <None Include="..\Resources\mActionMeasure.svg" />
+    <None Include="..\Resources\mActionMeasureAngle.svg" />
+    <None Include="..\Resources\mActionMeasureArea.svg" />
+    <None Include="..\Resources\mActionMoveItemsToBottom.svg" />
+    <None Include="..\Resources\mActionMoveItemsToTop.svg" />
+    <None Include="..\Resources\mActionNewBookmark.svg" />
+    <None Include="..\Resources\mActionPan.svg" />
+    <None Include="..\Resources\mActionQualityReportExport.svg" />
+    <None Include="..\Resources\mActionQualitySchemeConfig.svg" />
+    <None Include="..\Resources\mActionQualityTaskManager.svg" />
+    <None Include="..\Resources\mActionRedo.svg" />
+    <None Include="..\Resources\mActionRefresh.svg" />
+    <None Include="..\Resources\mActionRemove.svg" />
+    <None Include="..\Resources\mActionRemoveLayer.svg" />
+    <None Include="..\Resources\mActionRenameLayer.svg" />
+    <None Include="..\Resources\mActionRollbackAllEdits.svg" />
+    <None Include="..\Resources\mActionRollbackEdits.svg" />
+    <None Include="..\Resources\mActionSaveAllEdits.svg" />
+    <None Include="..\Resources\mActionSaveEdits.svg" />
+    <None Include="..\Resources\mActionScaleAccuracy.svg" />
+    <None Include="..\Resources\mActionSelect.svg" />
+    <None Include="..\Resources\mActionSelectAll.svg" />
+    <None Include="..\Resources\mActionSheetEdgeSeries.svg" />
+    <None Include="..\Resources\mActionShowAllLayers.svg" />
+    <None Include="..\Resources\mActionShowBookmarks.svg" />
+    <None Include="..\Resources\mActionShowSelectedLayers.svg" />
+    <None Include="..\Resources\mActionToggleAllLayers.svg" />
+    <None Include="..\Resources\mActionToggleEditing.svg" />
+    <None Include="..\Resources\mActionUndo.svg" />
+    <None Include="..\Resources\mActionUngroupItems.svg" />
+    <None Include="..\Resources\mActionUnlink.svg" />
+    <None Include="..\Resources\mActionVertexTool.svg" />
+    <None Include="..\Resources\mActionZoomActual.svg" />
+    <None Include="..\Resources\mActionZoomFullExtent.svg" />
+    <None Include="..\Resources\mActionZoomIn.svg" />
+    <None Include="..\Resources\mActionZoomLast.svg" />
+    <None Include="..\Resources\mActionZoomNext.svg" />
+    <None Include="..\Resources\mActionZoomOut.svg" />
+    <None Include="..\Resources\mActionZoomToArea.svg" />
+    <None Include="..\Resources\mActionZoomToLayer.svg" />
+    <None Include="..\Resources\mActionZoomToSelected.svg" />
+    <None Include="..\Resources\mIconColorWheel.svg" />
+    <None Include="..\Resources\mIconFolderLink.svg" />
+    <None Include="..\Resources\mIconLayerTree.svg" />
+    <None Include="..\Resources\mIconProperties.svg" />
+    <None Include="..\Resources\mSourceFields.svg" />
+    <None Include="..\Resources\catalog_icons\materials.svg" />
+    <None Include="..\Resources\module_access_control.png" />
+    <None Include="..\Resources\module_map_achievement.png" />
+    <None Include="..\Resources\module_map_generalization.png" />
+    <None Include="..\Resources\module_map_quality.png" />
+    <None Include="..\Resources\module_map_service.png" />
+    <None Include="..\Resources\catalog_icons\other.svg" />
+    <None Include="..\Resources\catalog_icons\pdf.svg" />
+    <None Include="..\Resources\catalog_icons\point.svg" />
+    <None Include="..\Resources\catalog_icons\polygon.svg" />
+    <None Include="..\Resources\catalog_icons\raster.svg" />
+    <None Include="..\Resources\catalog_icons\results.svg" />
+    <None Include="..\Resources\splash.png" />
+    <None Include="..\Resources\catalog_icons\spreadsheet.svg" />
+    <None Include="..\Resources\catalog_icons\table.svg" />
+    <None Include="..\Resources\template_icon_logout.svg" />
+    <None Include="..\Resources\template_icon_return_home.svg" />
+    <None Include="..\Resources\toolbox_map_pin.svg" />
+    <None Include="..\Resources\tree_branch_closed_dark_theme.svg" />
+    <None Include="..\Resources\tree_branch_closed_light_theme.svg" />
+    <None Include="..\Resources\tree_branch_open_dark_theme.svg" />
+    <None Include="..\Resources\tree_branch_open_light_theme.svg" />
+    <None Include="..\Resources\tree_checkbox_checked.svg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

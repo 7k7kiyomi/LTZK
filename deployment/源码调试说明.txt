@@ -1,0 +1,32 @@
+一、源码目录说明
+
+源码位于开发交付包的 01_Source 目录。
+开发人员打开 01_Source\LTZK.sln 即可进入 Visual Studio 工程。
+
+二、Visual Studio 调试
+
+如果使用 VS 直接 F5 调试，需要保证 VS 调试环境能够找到 QGIS_32815 和 OSGeo4W_32815。
+可以在项目属性的“配置属性 -> 调试 -> 环境”中配置 QGIS_PREFIX_PATH、OSGEO4W_ROOT、QT_PLUGIN_PATH、QT_QPA_PLATFORM_PLUGIN_PATH、GDAL_DATA、PROJ_LIB、PATH 等变量。
+
+三、通过脚本运行源码生成结果
+
+如果已经在 01_Source 中编译过程序，可以修改 01_Source\.env：
+
+QGIS_PREFIX_PATH=..\02_Runtime\LTZK\QGIS_32815
+OSGEO4W_ROOT=..\02_Runtime\LTZK\OSGeo4W_32815
+
+然后双击 01_Source\start_LTZK.bat。
+该脚本会优先启动 01_Source\x64\Debug\LTZK.exe；如果 Debug 不存在，再尝试 01_Source\x64\Release\LTZK.exe。
+
+四、人工整理运行包
+
+源码修改并生成 Release 后，不再使用自动打包脚本。
+请手工把 Release 输出整理到运行目录，并确认 LTZK.exe、插件 DLL、config 和 resources 来自同一次构建。
+
+五、插件配置开发
+
+插件 DLL 放在 plugins 目录。
+功能与插件动作的映射关系放在 config\plugin_bindings.json。
+如果要把某个菜单功能改为调用另一个 DLL 或另一个插件动作，优先修改该 JSON 配置文件。
+
+Visual Studio 生成 Debug 或 Release 时，会把 config\plugin_bindings.json 复制到输出目录的 config 文件夹。

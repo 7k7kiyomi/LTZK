@@ -1,0 +1,394 @@
+{
+    "plugins":  [
+                    {
+                        "id":  "map_quality_check_tools",
+                        "dll":  "plugin_map_quality_check_tools.dll",
+                        "enabled":  true,
+                        "watchResultOutputs": true,
+                        "actionIcons":  [
+                                            {
+                                                "fallbackActionIndex":  0,
+                                                "icon":  "Resources/mActionMapDataDownload.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  1,
+                                                "icon":  "Resources/mActionMapDataPreprocess.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  2,
+                                                "icon":  "Resources/mActionQualitySchemeConfig.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  3,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  4,
+                                                "icon":  "Resources/mActionQualityReportExport.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  5,
+                                                "icon":  "Resources/mActionMapLayoutConfig.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  6,
+                                                "icon":  "Resources/mActionSheetEdgeSeries.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  7,
+                                                "icon":  "Resources/mActionScaleAccuracy.svg"
+                                            }
+                                        ],
+                        "bindings":  [
+                                        {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "地图数据下载",
+                                             "actionKeywords":  [
+                                                                    "地图数据",
+                                                                    "下载"
+                                                                ],
+                                             "fallbackActionIndex":  0,
+                                             "icon":  "Resources/mActionMapDataDownload.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "地图数据预处理",
+                                             "actionKeywords":  [
+                                                                    "地图数据",
+                                                                    "预处理"
+                                                                ],
+                                             "fallbackActionIndex":  1,
+                                             "icon":  "Resources/mActionMapDataPreprocess.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "质检方案配置",
+                                             "watchResultOutputs":  false,
+                                             "actionKeywords":  [
+                                                                    "质检方案",
+                                                                    "配置"
+                                                                ],
+                                             "fallbackActionIndex":  2,
+                                             "icon":  "Resources/mActionQualitySchemeConfig.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "质检任务管理",
+                                             "actionKeywords":  [
+                                                                    "质检任务",
+                                                                    "管理"
+                                                                ],
+                                             "fallbackActionIndex":  3,
+                                             "icon":  "Resources/mActionQualityTaskManager.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "质检报告输出",
+                                             "actionKeywords":  [
+                                                                    "报告",
+                                                                    "导出"
+                                                                ],
+                                             "fallbackActionIndex":  4,
+                                             "icon":  "Resources/mActionQualityReportExport.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "图片地图质检",
+                                             "actionKeywords":  [
+                                                                    "图片",
+                                                                    "地图"
+                                                                ],
+                                             "fallbackActionIndex":  5,
+                                             "icon":  "Resources/mActionMapLayoutConfig.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "图幅接边检查",
+                                             "resultOrganization":  "mapQualityError",
+                                             "actionKeywords":  [
+                                                                    "接边",
+                                                                    "系列"
+                                                                ],
+                                             "fallbackActionIndex":  6,
+                                             "icon":  "Resources/mActionSheetEdgeSeries.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图成果质检"
+                                                          ],
+                                             "featureName":  "跨比例尺检查",
+                                             "resultOrganization":  "mapQualityError",
+                                             "actionKeywords":  [
+                                                                    "跨比例尺",
+                                                                    "表达"
+                                                                ],
+                                             "fallbackActionIndex":  7,
+                                             "icon":  "Resources/mActionScaleAccuracy.svg"
+                                         }
+                                     ]
+                    },
+                    {
+						  "id": "map_product_manager_tools",
+						  "dll": "map_product_manager_tools.dll",
+						  "enabled": true,
+                          "watchResultOutputs": true,
+						  "actionIcons": [
+							
+							{
+							  "fallbackActionIndex": 1,
+							  "icon": "Resources/icon_db_config.svg"
+							},
+							{
+							  "fallbackActionIndex": 8,
+							  "icon": "Resources/icon_data_import.svg"
+							},
+							{
+							  "fallbackActionIndex": 2,
+							  "icon": "Resources/icon_product_storage.svg"
+							},
+							{
+							  "fallbackActionIndex": 3,
+							  "icon": "Resources/icon_metadata.svg"
+							},
+							{
+							  "fallbackActionIndex": 4,
+							  "icon": "Resources/icon_product_search.svg"
+							},
+							{
+							  "fallbackActionIndex": 5,
+							  "icon": "Resources/icon_version_diff.svg"
+							},
+							{
+							  "fallbackActionIndex": 9,
+							  "icon": "Resources/icon_theme_manager.svg"
+							},
+							
+							{
+							  "fallbackActionIndex": 7,
+							  "icon": "Resources/icon_map_service.svg"
+							}
+							
+							
+						  ],
+						  "bindings": [
+							
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "数据库连接配置",
+							  "actionKeywords": [
+								"数据库连接"
+							  ],
+							  "fallbackActionIndex": 1,
+							  "icon": "Resources/icon_db_config.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "数据导入",
+							  "actionKeywords": [
+								"数据导入"
+							  ],
+							  "fallbackActionIndex": 8,
+							  "icon": "Resources/icon_data_import.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "成果目录操作",
+							  "showInMenu": false,
+							  "actionKeywords": [
+								"成果目录操作"
+							  ],
+							  "fallbackActionIndex": -1,
+							  "icon": ""
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "成果存储与管理",
+							  "actionKeywords": [
+								"成果存储"
+							  ],
+							  "fallbackActionIndex": 2,
+							  "icon": "Resources/icon_product_storage.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "元数据管理",
+							  "actionKeywords": [
+								"元数据"
+							  ],
+							  "fallbackActionIndex": 3,
+							  "icon": "Resources/icon_metadata.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "成果检索与预览",
+							  "actionKeywords": [
+								"检索",
+								"预览"
+							  ],
+							  "fallbackActionIndex": 4,
+							  "icon": "Resources/icon_product_search.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "版本回溯",
+							  "actionKeywords": [
+								"回溯",
+								"差异比对"
+							  ],
+							  "fallbackActionIndex": 5,
+							  "icon": "Resources/icon_version_diff.svg"
+							},
+							{
+							  "menuPath": [
+								"地图成果管理"
+							  ],
+							  "featureName": "主题管理",
+							  "actionKeywords": [
+								"主题管理"
+							  ],
+							  "fallbackActionIndex": 9,
+							  "icon": "Resources/icon_theme_manager.svg"
+							},
+							
+							{
+							  "menuPath": [
+								"地图服务管理"
+							  ],
+							  "featureName": "地图服务管理",
+							  "actionKeywords": [
+								"地图服务管理"
+							  ],
+							  "fallbackActionIndex": 7,
+							  "icon": "Resources/icon_map_service.svg"
+							}
+						  ]
+						},
+						{
+                        "id":  "map_generalization_tools",
+                        "dll":  "plugin_map_generalization.dll",
+                        "enabled":  true,
+                        "watchResultOutputs": true,
+                        "actionIcons":  [
+                                            {
+                                                "fallbackActionIndex":  0,
+                                                "icon":  "Resources/mActionMapLayoutConfig.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  1,
+                                                "icon":  "Resources/mActionMapDataPreprocess.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  3,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  4,
+                                                "icon":  "Resources/mActionFileSave.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  5,
+                                                "icon":  "Resources/mActionFileSaveAs.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  6,
+                                                "icon":  "Resources/mActionMapDataPreprocess.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  7,
+                                                "icon":  "Resources/mActionQualitySchemeConfig.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  8,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  10,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  11,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  12,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  13,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            },
+                                            {
+                                                "fallbackActionIndex":  14,
+                                                "icon":  "Resources/mActionQualityTaskManager.svg"
+                                            }
+                                        ],
+                        "bindings":  [
+                                         {
+                                             "menuPath":  [
+                                                              "地图智能制图"
+                                                          ],
+                                             "featureName":  "地图综合",
+                                             "actionKeywords":  [
+                                                                    "地图综合"
+                                                                ],
+                                             "fallbackActionIndex":  1,
+                                             "icon":  "Resources/icon_intelligent_generalization.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图智能制图"
+                                                          ],
+                                             "featureName":  "综合成果质检",
+                                             "actionKeywords":  [
+                                                                    "自动化质检"
+                                                                ],
+                                             "fallbackActionIndex":  3,
+                                             "icon":  "Resources/icon_intelligent_quality.svg"
+                                         },
+                                         {
+                                             "menuPath":  [
+                                                              "地图智能制图",
+                                                              "缩编预处理工具"
+                                                          ],
+                                             "featureName":  "格式转换",
+                                             "actionKeywords":  [
+                                                                    "格式转换"
+                                                                ],
+                                             "fallbackActionIndex":  7,
+                                             "icon":  "Resources/icon_intelligent_convert.svg"
+                                         }
+                                         
+                                         
+                                     ]
+                    }
+                ]
+}
+

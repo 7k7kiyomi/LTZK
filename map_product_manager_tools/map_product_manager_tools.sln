@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "map_product_manager_tools", "map_product_manager_tools.vcxproj", "{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		MinSizeRel|x64 = MinSizeRel|x64
+		Release|x64 = Release|x64
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.Debug|x64.ActiveCfg = Debug|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.Debug|x64.Build.0 = Debug|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.Release|x64.ActiveCfg = Release|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.Release|x64.Build.0 = Release|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A26DE7D5-2A77-4F05-98D6-D61A7643ADA7}
+	EndGlobalSection
+EndGlobal

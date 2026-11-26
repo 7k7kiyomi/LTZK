@@ -1,0 +1,259 @@
+{
+  "sourceConfig": "E:\\LTZK\\config\\plugin_bindings.json",
+  "count": 21,
+  "icons": [
+    {
+      "slug": "map_data_download",
+      "fileBase": "01_map_data_download",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "地图数据下载",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 0,
+      "currentIcon": "Resources/mActionMapDataDownload.svg"
+    },
+    {
+      "slug": "map_data_preprocess",
+      "fileBase": "02_map_data_preprocess",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "地图数据预处理",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 1,
+      "currentIcon": "Resources/mActionMapDataPreprocess.svg"
+    },
+    {
+      "slug": "quality_scheme_config",
+      "fileBase": "03_quality_scheme_config",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "质检方案配置",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 2,
+      "currentIcon": "Resources/mActionQualitySchemeConfig.svg"
+    },
+    {
+      "slug": "quality_task_manager",
+      "fileBase": "04_quality_task_manager",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "质检任务管理",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 3,
+      "currentIcon": "Resources/mActionQualityTaskManager.svg"
+    },
+    {
+      "slug": "picture_map_quality",
+      "fileBase": "05_picture_map_quality",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "图片地图质检",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 5,
+      "currentIcon": "Resources/mActionMapLayoutConfig.svg"
+    },
+    {
+      "slug": "sheet_edge_check",
+      "fileBase": "06_sheet_edge_check",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "图幅接边检查",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 6,
+      "currentIcon": "Resources/mActionSheetEdgeSeries.svg"
+    },
+    {
+      "slug": "cross_scale_check",
+      "fileBase": "07_cross_scale_check",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "跨比例尺检查",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 7,
+      "currentIcon": "Resources/mActionScaleAccuracy.svg"
+    },
+    {
+      "slug": "quality_report_export",
+      "fileBase": "08_quality_report_export",
+      "pluginId": "map_quality_check_tools",
+      "featureName": "质检报告输出",
+      "menuPath": [
+        "地图成果质检"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 4,
+      "currentIcon": "Resources/mActionQualityReportExport.svg"
+    },
+    {
+      "slug": "database_connection",
+      "fileBase": "09_database_connection",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "数据库连接",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 1,
+      "currentIcon": "Resources/icon_db_config.svg"
+    },
+    {
+      "slug": "data_import",
+      "fileBase": "10_data_import",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "数据导入",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 8,
+      "currentIcon": "Resources/icon_data_import.svg"
+    },
+    {
+      "slug": "product_catalog_operation",
+      "fileBase": "11_product_catalog_operation",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "成果目录操作",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": false,
+      "fallbackActionIndex": -1,
+      "currentIcon": ""
+    },
+    {
+      "slug": "metadata_management",
+      "fileBase": "12_metadata_management",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "元数据管理",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 3,
+      "currentIcon": "Resources/icon_metadata.svg"
+    },
+    {
+      "slug": "search_preview",
+      "fileBase": "13_search_preview",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "检索与预览",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 4,
+      "currentIcon": "Resources/icon_product_search.svg"
+    },
+    {
+      "slug": "version_rollback",
+      "fileBase": "14_version_rollback",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "版本回溯",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 5,
+      "currentIcon": "Resources/icon_version_diff.svg"
+    },
+    {
+      "slug": "theme_management",
+      "fileBase": "15_theme_management",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "主题管理",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 9,
+      "currentIcon": "Resources/icon_theme_manager.svg"
+    },
+    {
+      "slug": "map_service_management",
+      "fileBase": "16_map_service_management",
+      "pluginId": "map_product_manager_tools",
+      "featureName": "地图服务管理",
+      "menuPath": [
+        "地图服务管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 7,
+      "currentIcon": "Resources/icon_map_service.svg"
+    },
+    {
+      "slug": "parameter_config",
+      "fileBase": "17_parameter_config",
+      "pluginId": "map_generalization_tools",
+      "featureName": "参数配置",
+      "menuPath": [
+        "地图智能综合"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 15,
+      "currentIcon": "Resources/icon_intelligent_metadata.svg"
+    },
+    {
+      "slug": "map_generalization",
+      "fileBase": "18_map_generalization",
+      "pluginId": "map_generalization_tools",
+      "featureName": "地图综合",
+      "menuPath": [
+        "地图智能综合"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 1,
+      "currentIcon": "Resources/icon_intelligent_generalization.svg"
+    },
+    {
+      "slug": "generalized_result_quality",
+      "fileBase": "19_generalized_result_quality",
+      "pluginId": "map_generalization_tools",
+      "featureName": "综合成果质检",
+      "menuPath": [
+        "地图智能综合"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 3,
+      "currentIcon": "Resources/icon_intelligent_quality.svg"
+    },
+    {
+      "slug": "format_conversion",
+      "fileBase": "20_format_conversion",
+      "pluginId": "map_generalization_tools",
+      "featureName": "格式转换",
+      "menuPath": [
+        "地图智能综合",
+        "缩编预处理工具"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 7,
+      "currentIcon": "Resources/icon_intelligent_convert.svg"
+    },
+    {
+      "slug": "data_backup_restore",
+      "fileBase": "21_data_backup_restore",
+      "pluginId": "map_generalization_tools",
+      "featureName": "数据备份恢复",
+      "menuPath": [
+        "地图成果管理"
+      ],
+      "showInMenu": true,
+      "fallbackActionIndex": 4,
+      "currentIcon": "Resources/icon_intelligent_backup.svg"
+    }
+  ]
+}

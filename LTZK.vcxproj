@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="16.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{19BD89D1-087E-4E0F-A015-0C239AFEDF73}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>E:\extern\OSGeo4W_32815\apps\Qt5</QtInstall>
+    <QtModules>core;gui;widgets;xml;svg;network;sql</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>E:\extern\OSGeo4W_32815\apps\Qt5</QtInstall>
+    <QtModules>core;gui;widgets;xml;svg;network;sql</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <UseMultiToolTask>false</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <UseMultiToolTask>false</UseMultiToolTask>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)auth;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCrypto;E:\extern\OSGeo4W_32815\apps\Qt5\include\qt5keychain;E:\extern\OSGeo4W_32815\apps\Qt5\include;E:\extern\QGIS_32815\include;E:\extern\QGIS_32815\src\ui;E:\extern\OSGeo4W_32815\include;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;QT_NO_DEPRECATED_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\extern\QGIS_32815\lib;E:\extern\QGIS_32815\src\app\Release;E:\extern\OSGeo4W_32815\lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qgis_core.lib;qgis_gui.lib;qgis_app.lib;gdal.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Xml.lib;Qt5Svg.lib;Qt5Network.lib;Qt5Sql.lib;sqlite3_i.lib;proj.lib;geos_c.lib;spatialite_i.lib;libpq.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)auth;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCrypto;E:\extern\OSGeo4W_32815\apps\Qt5\include\qt5keychain;E:\extern\OSGeo4W_32815\apps\Qt5\include;E:\extern\QGIS_32815\include;E:\extern\QGIS_32815\src\ui;E:\extern\OSGeo4W_32815\include;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;QT_NO_DEPRECATED_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\extern\QGIS_32815\lib;E:\extern\QGIS_32815\src\app\Release;E:\extern\OSGeo4W_32815\lib;E:\extern\OSGeo4W_32815\apps\Qt5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qgis_core.lib;qgis_gui.lib;qgis_app.lib;gdal.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Xml.lib;Qt5Svg.lib;Qt5Network.lib;Qt5Sql.lib;sqlite3_i.lib;proj.lib;geos_c.lib;spatialite_i.lib;libpq.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <ForceSynchronousPDBWrites>true</ForceSynchronousPDBWrites>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/FS /utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ForceSynchronousPDBWrites>true</ForceSynchronousPDBWrites>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/FS /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)compat\qgis;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtRcc Include="LTZK.qrc" />
+    <QtUic Include="LTZK.ui" />
+    <QtUic Include="LocalRangeExport.ui" />
+    <QtUic Include="LocalMainAreaClip.ui" />
+    <QtMoc Include="LTZK.h" />
+    <ClCompile Include="FeatureAttribute.cpp" />
+    <ClCompile Include="DataCatalogWidget.cpp" />
+    <ClCompile Include="DataCatalogProductCatalog.cpp" />
+    <ClCompile Include="DataCatalogConnectionDialog.cpp" />
+    <ClCompile Include="PlatformMenuDatabaseConnectionObserver.cpp" />
+    <ClCompile Include="LTZK.cpp" />
+    <ClCompile Include="WorkspaceLayerTools.cpp" />
+    <ClCompile Include="WorkspaceDataSources.cpp" />
+    <ClCompile Include="WorkspaceDataSourceLoader.cpp" />
+    <ClCompile Include="LocalProductOperation.cpp" />
+    <ClCompile Include="auth\LTZKAuthManager.cpp" />
+    <ClCompile Include="auth\LTZKLoginDialog.cpp" />
+    <ClCompile Include="auth\LTZKAccessControlDialog.cpp" />
+    <ClCompile Include="main.cpp" />
+  <ClCompile Include="PluginBindingConfig.cpp" /><ClCompile Include="LTZKPluginManager.cpp" /><ClCompile Include="LTZKQgisInterface.cpp" /></ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LTZKUiScale.h" />
+    <ClInclude Include="WorkspaceDataSourceLoader.h" />
+    <ClInclude Include="MapServiceWorkspace.h" />
+    <ClInclude Include="LTZKNativeDialogStyle.h" />
+    <ClInclude Include="LTZKSeriesTableTypography.h" />
+    <ClInclude Include="compat\qgis\attributetable\qgsattributetableview.h" />
+    <ClInclude Include="compat\qgis\attributetable\qgsfeaturelistview.h" />
+    <ClInclude Include="FeatureAttribute.h" />
+    <ClInclude Include="DataCatalogWidget.h" />
+    <ClInclude Include="DataCatalogProductCatalog.h" />
+    <ClInclude Include="DataCatalogConnectionDialog.h" />
+    <ClInclude Include="PlatformMenuDatabaseConnectionObserver.h" />
+    <ClInclude Include="LocalProductOperation.h" />
+    <ClInclude Include="auth\LTZKAuthManager.h" />
+    <ClInclude Include="auth\LTZKLoginDialog.h" />
+    <ClInclude Include="auth\LTZKAccessControlDialog.h" />
+  <ClInclude Include="PluginBindingConfig.h" /><ClInclude Include="LTZKPluginManager.h" /><ClInclude Include="LTZKQgisInterface.h" /></ItemGroup>
+  <ItemGroup>
+    <None Include="config\plugin_bindings.json" />
+    <None Include="config\database.ini" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="SetOSGeo4W32815Environment" BeforeTargets="QtVars">
+    <SetEnv Name="O4W_ROOT" Value="E:\extern\OSGeo4W_32815" Prefix="false" />
+    <SetEnv Name="O4W_QT_PREFIX" Value="E:\extern\OSGeo4W_32815\apps\Qt5" Prefix="false" />
+    <SetEnv Name="O4W_QT_BINARIES" Value="E:\extern\OSGeo4W_32815\apps\Qt5\bin" Prefix="false" />
+    <SetEnv Name="O4W_QT_PLUGINS" Value="E:\extern\OSGeo4W_32815\apps\Qt5\plugins" Prefix="false" />
+    <SetEnv Name="O4W_QT_LIBRARIES" Value="E:\extern\OSGeo4W_32815\apps\Qt5\lib" Prefix="false" />
+    <SetEnv Name="O4W_QT_TRANSLATIONS" Value="E:\extern\OSGeo4W_32815\apps\Qt5\translations" Prefix="false" />
+    <SetEnv Name="O4W_QT_HEADERS" Value="E:\extern\OSGeo4W_32815\apps\Qt5\include" Prefix="false" />
+    <SetEnv Name="O4W_QT_DOC" Value="E:\extern\OSGeo4W_32815\apps\Qt5\doc" Prefix="false" />
+    <SetEnv Name="PROJ_DATA" Value="E:\extern\OSGeo4W_32815\share\proj" Prefix="false" />
+    <SetEnv Name="PATH" Value="E:\extern\QGIS_32815\bin;E:\extern\OSGeo4W_32815\bin;E:\extern\OSGeo4W_32815\apps\Qt5\bin;$(PATH)" Prefix="false" />
+  </Target>
+  <Target Name="CopyLtzKPlugins" AfterTargets="Build">
+    <ItemGroup>
+      <LtzKPluginDll Include="$(MSBuildProjectDirectory)\plugins\*.dll" />
+    </ItemGroup>
+    <MakeDir Directories="$(OutDir)plugins" Condition="'@(LtzKPluginDll)' != ''" />
+    <Copy SourceFiles="@(LtzKPluginDll)" DestinationFolder="$(OutDir)plugins" SkipUnchangedFiles="true" Condition="'@(LtzKPluginDll)' != ''" />
+    <Warning Text="No plugin DLL was found in $(MSBuildProjectDirectory)\plugins." Condition="'@(LtzKPluginDll)' == ''" />
+  </Target>
+  <Target Name="CopyLtzKPluginConfig" AfterTargets="Build">
+    <ItemGroup>
+      <LtzKPluginConfig Include="$(MSBuildProjectDirectory)\config\plugin_bindings.json" />
+      <LtzKPluginConfig Include="$(MSBuildProjectDirectory)\config\database.ini" />
+    </ItemGroup>
+    <MakeDir Directories="$(OutDir)config" />
+    <Copy SourceFiles="@(LtzKPluginConfig)" DestinationFolder="$(OutDir)config" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="CopyLtzKStartupScripts" AfterTargets="Build">
+    <ItemGroup>
+      <LtzKStartupScript Include="$(MSBuildProjectDirectory)\deployment\start_LTZK.bat" />
+      <LtzKStartupScript Include="$(MSBuildProjectDirectory)\deployment\.env" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LtzKStartupScript)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

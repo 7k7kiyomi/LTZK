@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DataCatalogProductCatalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DataCatalogWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\PlatformMenuDatabaseConnectionObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="catalog_icon_probe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="qrc_LTZK.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\LTZK.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="..\Resources\LTZK.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\ai.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\combo_arrow_dark.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\combo_arrow_light.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\database.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\document.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\elements.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\feature_set.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\file.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\folder.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\hillshade.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\home_black_background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\home_login_background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\home_white_background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_data_import.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_db_config.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_backup.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_convert.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_database.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_download.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_edge.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_generalization.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_import.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_merge.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_metadata.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_intelligent_quality.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_map_service.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_metadata.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_product_search.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_product_storage.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_theme_manager.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\icon_version_diff.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\imagery.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\line.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\styles\ltzk_black.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\styles\ltzk_field_notes.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\styles\ltzk_sci_fi.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\styles\ltzk_steel_warm_white.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\styles\ltzk_white.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddGroup.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddOgrLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddPolygon.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddRasterLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddWcsLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddWfsLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAddWmsLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAllEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionAttributes.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCancelAllEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCancelEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCaptureLine.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCapturePoint.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCapturePolygon.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionCollapseTree.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionDeleteSelectedFeatures.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionDeselectAll.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionDuplicateLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionExpandTree.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionExport.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFeatureCount.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFileNew.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFileOpen.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFileSave.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFileSaveAs.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFilter.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionFilter2.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionGroupItems.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionHideAllLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionHideDeselectedLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionHideSelectedLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionIdentify.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionInOverview.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionInvertSelection.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMapDataPreprocess.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMapLayoutConfig.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMeasure.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMeasureAngle.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMeasureArea.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMoveItemsToBottom.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionMoveItemsToTop.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionNewBookmark.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionPan.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionQualityReportExport.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionQualitySchemeConfig.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionQualityTaskManager.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRedo.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRefresh.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRemove.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRemoveLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRenameLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRollbackAllEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionRollbackEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionSaveAllEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionSaveEdits.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionScaleAccuracy.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionSelect.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionSelectAll.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionSheetEdgeSeries.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionShowAllLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionShowBookmarks.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionShowSelectedLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionToggleAllLayers.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionToggleEditing.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionUndo.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionUngroupItems.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionUnlink.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionVertexTool.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomActual.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomFullExtent.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomIn.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomLast.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomNext.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomOut.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomToArea.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomToLayer.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mActionZoomToSelected.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mIconColorWheel.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mIconFolderLink.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mIconLayerTree.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mIconProperties.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\mSourceFields.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\materials.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\module_access_control.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\module_map_achievement.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\module_map_generalization.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\module_map_quality.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\module_map_service.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\other.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\pdf.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\point.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\polygon.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\raster.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\results.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\splash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\spreadsheet.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\catalog_icons\table.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\template_icon_logout.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\template_icon_return_home.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\toolbox_map_pin.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\tree_branch_closed_dark_theme.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\tree_branch_closed_light_theme.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\tree_branch_open_dark_theme.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\tree_branch_open_light_theme.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\tree_checkbox_checked.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

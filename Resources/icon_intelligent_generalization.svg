@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <path d="m3.5 8 5-3 5 3v5l-5 3-5-3z" fill="none" stroke="{{PRIMARY}}" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="m10.5 12 5-3 5 3v5l-5 3-5-3z" fill="none" stroke="{{SECONDARY}}" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="m8.5 16 2 1.2M15.5 9l2 1.2" stroke="{{ACCENT}}" stroke-width="1.7" stroke-linecap="round"/>
+  <path d="M7 8h3M6 10h4" stroke="{{ACCENT}}" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

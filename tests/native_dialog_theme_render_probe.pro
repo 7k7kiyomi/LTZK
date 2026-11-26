@@ -1,0 +1,10 @@
+QT += widgets xml svg network sql
+CONFIG += console c++17
+CONFIG -= app_bundle
+TEMPLATE = app
+TARGET = native_dialog_theme_render_probe
+DEFINES += _USE_MATH_DEFINES NOMINMAX QT_NO_DEPRECATED_WARNINGS
+INCLUDEPATH += E:/extern/QGIS_32815/include E:/extern/QGIS_32815/src/ui E:/extern/OSGeo4W_32815/include
+LIBS += -LE:/extern/QGIS_32815/lib -lqgis_gui -lqgis_core
+QMAKE_CXXFLAGS += /utf-8
+SOURCES += native_dialog_theme_render_probe.cpp

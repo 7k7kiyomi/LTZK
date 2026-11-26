@@ -1,0 +1,19 @@
+{
+  "source": "Tianditu Service Center - Administrative Division",
+  "page": "https://cloudcenter.tianditu.gov.cn/administrativeDivision",
+  "public_map_data_url": "https://cloudcenter.tianditu.gov.cn/api/portal/region/map?gb=156620000&level=1",
+  "retrieved_date": "2026-11-24",
+  "page_update_date": "2026-10",
+  "usage_note": "Map visualization only, as stated on source page.",
+  "features": 17,
+  "areas": "14 prefecture-level cities/prefectures plus 3 separately listed management areas, preserved exactly as source.",
+  "format_note": "Public map display data, decoded using the transformation used by the source page; not the account-protected export download.",
+  "coordinates_note": "Original longitude/latitude coordinates retained without transformation; GeoJSON CRS convention EPSG:4326 used for SHP.",
+  "raw_sha256": "5456c881354d4861eca0a0bbdd7685d8fd70c5501601106e0949efce5b31ca82",
+  "geojson_sha256": "a5650ae8096b76ba75567f5779770226f7336f7e54895f2bcd991be5bad6aafd",
+  "compatibility_fields_added": [
+    "省级",
+    "地级"
+  ],
+  "legacy_filename_note": "2024 initial prefecture filename retained solely for compatibility; actual source retrieved from Tianditu on 2026-11-24."
+}

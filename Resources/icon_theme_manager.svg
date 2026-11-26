@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 主题管理 - 主题目录 + 星标 -->
+
+  <!-- 文件夹主体（主题目录） -->
+  <path d="M3 7h5.5l2 2H21a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="none" stroke="#5B8FF9" stroke-width="1.5"/>
+
+  <!-- 五角星（主题标星） -->
+  <path d="M12 10.1l1.4 2.83 3.14.46-2.27 2.21.54 3.14L12 17.33l-2.81 1.41.54-3.14-2.27-2.21 3.14-.46z" fill="#F6BD16" stroke="#E8A810" stroke-width="0.5"/>
+</svg>

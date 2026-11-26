@@ -1,0 +1,38 @@
+一、开发交付包结构
+
+LTZK_Developer_Package\
+  01_Source\     源码工程目录，用于修改代码、编译和调试
+  02_Runtime\    已整理好的运行包，用于直接运行验证
+  03_Docs\       配置、运行、源码调试说明
+
+二、普通运行
+
+进入 02_Runtime\LTZK。
+如果 QGIS_32815 和 OSGeo4W_32815 已经放在 02_Runtime\LTZK 目录下，.env 保持默认即可：
+
+QGIS_PREFIX_PATH=QGIS_32815
+OSGEO4W_ROOT=OSGeo4W_32815
+
+然后双击 start_LTZK.bat。
+
+三、源码开发
+
+进入 01_Source，打开 LTZK.sln。
+如果只是想运行已经生成出来的程序，可以先修改 01_Source\.env，然后双击 01_Source\start_LTZK.bat。
+该脚本会优先启动 01_Source\x64\Debug\LTZK.exe；如果 Debug 不存在，再尝试 01_Source\x64\Release\LTZK.exe。
+
+插件功能映射在 01_Source\config\plugin_bindings.json 中维护。
+插件 DLL 放在 01_Source\plugins 目录。
+修改功能和 DLL 的对应关系时，优先改 JSON 配置文件。
+
+四、人工整理运行包
+
+源码修改并生成 Release 后，不再使用自动打包脚本。
+请手工把 Release 输出整理到运行目录，并确认以下文件来自同一次 Release 构建：
+
+bin\LTZK.exe
+plugins\plugin_map_quality_check_tools.dll
+config\plugin_bindings.json
+resources\
+
+整理完成后双击 start_LTZK.bat 验证。

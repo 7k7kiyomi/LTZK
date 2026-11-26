@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LocalMainAreaClip</class>
+ <widget class="QDialog" name="LocalMainAreaClip">
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>620</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>按主区裁切导出</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="hLayout_mainArea">
+     <item>
+      <widget class="QLabel" name="label_mainArea">
+       <property name="text">
+        <string>主区数据：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_mainArea"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Button_BrowseMainArea">
+       <property name="text">
+        <string>浏览...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="hLayout_field">
+     <item>
+      <widget class="QLabel" name="label_field">
+       <property name="text">
+        <string>标识字段：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_field"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_features">
+     <property name="text">
+      <string>选择要素（可多选）：</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="listWidget_features">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="hLayout_encFmt">
+     <item>
+      <widget class="QLabel" name="label_encoding">
+       <property name="text">
+        <string>编码：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_encoding">
+       <item>
+        <property name="text">
+         <string>UTF-8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GBK</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GB2312</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_format">
+       <property name="text">
+        <string>格式：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_format">
+       <item>
+        <property name="text">
+         <string>ESRI Shapefile (.shp)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GeoPackage (.gpkg)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GDB (.gdb)</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_encFmt">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_overwrite">
+       <property name="text">
+        <string>覆盖已存在文件</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_cartography">
+     <property name="title">
+      <string>制图</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_cartography">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_orient">
+        <property name="text">
+         <string>纸张方向：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_orient">
+        <item>
+         <property name="text">
+          <string>自动</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>纵向</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>横向</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_paperSize">
+        <property name="text">
+         <string>纸张大小：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="comboBox_paperSize">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>A0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>A4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>自定义</string>
+         </property>
+        </item>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="Button_ComputePaper">
+        <property name="text">
+         <string>计算</string>
+        </property>
+        <property name="toolTip">
+         <string>根据主区范围自动确定纸张方向与大小</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_customW">
+        <property name="text">
+         <string>自定义宽(mm)：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_customW">
+        <property name="text">
+         <string>594</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_customH">
+        <property name="text">
+         <string>自定义高(mm)：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="lineEdit_customH">
+        <property name="text">
+         <string>420</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_scale">
+     <property name="title">
+      <string>比例尺 / 内图廓</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_scale">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_standardScale">
+        <property name="text">
+         <string>标准比例尺：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_standardScale">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <item><property name="text"><string>500</string></property></item>
+        <item><property name="text"><string>1000</string></property></item>
+        <item><property name="text"><string>2000</string></property></item>
+        <item><property name="text"><string>2500</string></property></item>
+        <item><property name="text"><string>5000</string></property></item>
+        <item><property name="text"><string>10000</string></property></item>
+        <item><property name="text"><string>25000</string></property></item>
+        <item><property name="text"><string>50000</string></property></item>
+        <item><property name="text"><string>100000</string></property></item>
+        <item><property name="text"><string>200000</string></property></item>
+        <item><property name="text"><string>500000</string></property></item>
+        <item><property name="text"><string>1000000</string></property></item>
+        <item><property name="text"><string>2000000</string></property></item>
+        <property name="currentIndex"><number>5</number></property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="Button_ComputeScale">
+        <property name="text">
+         <string>自动计算</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QCheckBox" name="checkBox_customScale">
+        <property name="text">
+         <string>使用自定义</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_customScale">
+        <property name="text">
+         <string>自定义比例尺：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="3">
+       <widget class="QLineEdit" name="lineEdit_customScale">
+        <property name="text"><string>10000</string></property>
+        <property name="placeholderText"><string>请输入比例尺分母，如 12000</string></property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_innerW">
+        <property name="text"><string>内图廓宽(mm)：</string></property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_innerW">
+        <property name="text"><string>0</string></property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_innerH">
+        <property name="text"><string>内图廓高(mm)：</string></property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="lineEdit_innerH">
+        <property name="text"><string>0</string></property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QCheckBox" name="checkBox_enableInner">
+        <property name="text"><string>启用内图廓</string></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="hLayout_output">
+     <item>
+      <widget class="QLabel" name="label_output">
+       <property name="text"><string>输出文件：</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_output"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Button_BrowseOutput">
+       <property name="text"><string>浏览...</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="hLayout_buttons">
+     <item>
+      <widget class="QCheckBox" name="checkBox_autoLoad">
+       <property name="text"><string>导出后自动加载到地图</string></property>
+       <property name="checked"><bool>true</bool></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_buttons">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Button_Export">
+       <property name="text"><string>导出</string></property>
+       <property name="default"><bool>true</bool></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Button_Cancel">
+       <property name="text"><string>取消</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+ </resources>
+ <connections>
+ </connections>
+</ui>

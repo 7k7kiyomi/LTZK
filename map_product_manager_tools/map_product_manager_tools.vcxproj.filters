@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{E2E3521C-A384-435A-A852-D68B18F99D45}</UniqueIdentifier>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{D9A16377-928A-427F-BF55-0BEFE2301321}</UniqueIdentifier>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{B2C3D4E5-F6A7-8901-BCDE-F12345678901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui_class">
+      <UniqueIdentifier>{C3D4E5F6-A7B8-9012-CDEF-123456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="images">
+      <UniqueIdentifier>{D4E5F6A7-B8C9-0123-DEF0-234567890123}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="map_product_manager_tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="database\postgis_connector.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\product_metadata.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\product_dao.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="database\schema_manager.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="core\metadata_extractor.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\file_storage_manager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\product_storage_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\metadata_manager_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\product_search_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\version_diff_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\access_control_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\db_config_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\map_service_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\chart_widget.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\service_record_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\gdb_layer_selector_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="database\service_dao.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_postgis_connector.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_product_dao.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_schema_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_metadata_extractor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_file_storage_manager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\qrc_map_product_manager_tools.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="product_catalog_plugin_api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_db_config_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_access_control_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_product_storage_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_metadata_manager_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_product_search_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_version_diff_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_map_product_manager_tools.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="core\calendar_helper.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\unit_manager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\data_importer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_data_importer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_map_service_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_chart_widget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_service_record_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_service_dao.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gdb_layer_selector_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\dynamic_statistics_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\data_import_wizard.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dynamic_statistics_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="core\xlsx_writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\xlsx_template_filler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\price_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\login_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_login_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_data_import_wizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="database\theme_dao.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\theme_manager_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\theme_add_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\theme_content_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\theme_assign_dialog.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_dao.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_manager_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_add_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_content_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_assign_dialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_se_range_export.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_se_main_area_clip.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="core\map_product_clip_engine.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\se_range_export.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\se_main_area_clip.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_class\map_extent_draw_tool.cpp">
+      <Filter>ui_class</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="database\product_metadata.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="qgisplugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_access_control_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_db_config_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_metadata_manager_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_product_search_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_product_storage_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_version_diff_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_map_service_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_service_record_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_gdb_layer_selector_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_dynamic_statistics_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="database\service_record.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="core\unit_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_login_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\user_info_bar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\xlsx_template_filler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\price_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\zip_packer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="database\theme_record.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_manager_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_add_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_content_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_assign_dialog.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_range_export.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\Release\ui_main_area_clip.h">
+      <Filter>Generated Files\Release</Filter>
+    </ClInclude>
+    <ClInclude Include="core\map_product_clip_engine.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_class\map_extent_draw_tool.h">
+      <Filter>ui_class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\product_catalog_plugin_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="map_product_manager_tools.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\db_config_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_storage_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\metadata_manager_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_search_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\version_diff_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\access_control_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\map_service_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\service_record_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\gdb_layer_selector_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\dynamic_statistics_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="map_product_manager_tools.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="database\postgis_connector.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="database\product_dao.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="database\schema_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="core\metadata_extractor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="core\file_storage_manager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_storage_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\metadata_manager_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_search_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\version_diff_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\access_control_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\db_config_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="core\data_importer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\map_service_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\chart_widget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\service_record_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="database\service_dao.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\gdb_layer_selector_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\dynamic_statistics_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\data_import_wizard.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\login_dialog.ui" />
+    <CustomBuild Include="ui_class\login_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_manager_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_add_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_content_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_assign_dialog.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="database\theme_dao.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_manager_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_add_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_content_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_assign_dialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\se_range_export.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\se_main_area_clip.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\range_export.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\main_area_clip.ui">
+      <Filter>ui_class</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

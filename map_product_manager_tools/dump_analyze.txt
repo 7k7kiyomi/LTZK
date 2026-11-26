@@ -1,0 +1,365 @@
+Opened log file 'd:\GarMap\qgis_plugins\cplusplus\map_product_manager_tools\dump_analyze.txt'
+
+Microsoft (R) Windows Debugger Version 10.0.17763.132 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'
+
+Loading Dump File [C:\Users\pippo\AppData\Local\CrashDumps\LTZK.exe.436.dmp]
+User Mini Dump File: Only registers, stack and portions of memory are available
+
+Symbol search path is: srv*
+Executable search path is: 
+Windows 10 Version 26200 MP (16 procs) Free x64
+Product: WinNt, suite: SingleUserTS Personal
+26100.1.amd64fre.ge_release.240331-1435
+Machine Name:
+Debug session time: Fri Aug 28 20:51:01.000 2026 (UTC + 8:00)
+System Uptime: 0 days 11:40:15.901
+Process Uptime: 0 days 0:14:07.000
+................................................................
+................................................................
+................................................................
+................................................................
+................................................................
+...
+Loading unloaded module list
+...................
+This dump file has an exception of interest stored in it.
+The stored exception information can be accessed via .ecxr.
+(1b4.7b10): Access violation - code c0000005 (first/second chance not available)
+ntdll!NtWaitForMultipleObjects+0x14:
+00007ffb`cd1c0ed4 c3              ret
+0:000> !analyze -v; q
+*******************************************************************************
+*                                                                             *
+*                        Exception Analysis                                   *
+*                                                                             *
+*******************************************************************************
+
+*** WARNING: Unable to verify checksum for Qt5Widgets.dll
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for Qt5Widgets.dll - 
+*** WARNING: Unable to verify checksum for LTZK.exe
+*** ERROR: Module load completed but symbols could not be loaded for LTZK.exe
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for SogouTSF.ime - 
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for SogouPY.ime - 
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ichat_bundle64.dll - 
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for isgpet_bundle64.dll - 
+*** WARNING: Unable to verify checksum for qca-qt5.dll
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for qca-qt5.dll - 
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for FileSyncShell64.dll - 
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for nvwgf2umx.dll - 
+!ip2md 7ffacf7016b3
+
+Failed to request MethodData, not in JIT code range
+
+KEY_VALUES_STRING: 1
+
+
+STACKHASH_ANALYSIS: 1
+
+TIMELINE_ANALYSIS: 1
+
+Timeline: !analyze.Start
+    Name: <blank>
+    Time: 2026-08-29T07:50:04.650Z
+    Diff: 68343650 mSec
+
+Timeline: Dump.Current
+    Name: <blank>
+    Time: 2026-08-28T12:51:01.0Z
+    Diff: 0 mSec
+
+Timeline: Process.Start
+    Name: <blank>
+    Time: 2026-08-28T12:36:54.0Z
+    Diff: 847000 mSec
+
+Timeline: OS.Boot
+    Name: <blank>
+    Time: 2026-08-28T01:10:46.0Z
+    Diff: 42015000 mSec
+
+
+DUMP_CLASS: 2
+
+DUMP_QUALIFIER: 400
+
+CONTEXT:  (.ecxr)
+.ecxr
+rax=0000000000000001 rbx=000002a22ad3a4f0 rcx=000002a22ad3a500
+rdx=00007ffae55f1840 rsi=000002a22372ecb0 rdi=000002a22372ecb0
+rip=00007ffacf7016b3 rsp=000000f8aebfee28 rbp=0000000000000008
+ r8=000002a212034b00  r9=0000000000000000 r10=000002a212030000
+r11=000000f8aebfeeb0 r12=0000000000000110 r13=0000000000000001
+r14=000002a223698458 r15=00007ffac3fe85f0
+iopl=0         nv up ei pl nz na po nc
+cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010206
+Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+0x3:
+00007ffa`cf7016b3 8b02            mov     eax,dword ptr [rdx] ds:00007ffa`e55f1840=????????
+.cxr
+Resetting default scope
+
+FAULTING_IP: 
+Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+3
+00007ffa`cf7016b3 8b02            mov     eax,dword ptr [rdx]
+
+EXCEPTION_RECORD:  (.exr -1)
+.exr -1
+ExceptionAddress: 00007ffacf7016b3 (Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+0x0000000000000003)
+   ExceptionCode: c0000005 (Access violation)
+  ExceptionFlags: 00000000
+NumberParameters: 2
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 00007ffae55f1840
+Attempt to read from address 00007ffae55f1840
+
+FOLLOWUP_IP: 
+Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+3
+00007ffa`cf7016b3 8b02            mov     eax,dword ptr [rdx]
+
+READ_ADDRESS:  00007ffae55f1840 
+
+ERROR_CODE: (NTSTATUS) 0xc0000005 - <Unable to get error code text>
+
+EXCEPTION_CODE: (NTSTATUS) 0xc0000005 - <Unable to get error code text>
+
+EXCEPTION_CODE_STR:  c0000005
+
+EXCEPTION_PARAMETER1:  0000000000000000
+
+EXCEPTION_PARAMETER2:  00007ffae55f1840
+
+WATSON_BKT_PROCSTAMP:  6a7f1c9a
+
+WATSON_BKT_MODULE:  Qt5Core.dll
+
+WATSON_BKT_MODSTAMP:  62ae0e19
+
+WATSON_BKT_MODOFFSET:  16b3
+
+WATSON_BKT_MODVER:  5.15.3.0
+
+MODULE_VER_PRODUCT:  Qt5
+
+BUILD_VERSION_STRING:  26100.1.amd64fre.ge_release.240331-1435
+
+MODLIST_WITH_TSCHKSUM_HASH:  4d59cfa3df53a15ed87eac422b08c7be627054ab
+
+MODLIST_SHA1_HASH:  06b0fff0c66e2e1ed0915235cda1a2b62c7e8504
+
+NTGLOBALFLAG:  0
+
+PROCESS_BAM_CURRENT_THROTTLED: 0
+
+PROCESS_BAM_PREVIOUS_THROTTLED: 0
+
+APPLICATION_VERIFIER_FLAGS:  0
+
+PRODUCT_TYPE:  1
+
+SUITE_MASK:  784
+
+DUMP_FLAGS:  94
+
+DUMP_TYPE:  1
+
+PROCESS_NAME:  unknown
+
+MISSING_CLR_SYMBOL: 0
+
+ANALYSIS_SESSION_HOST:  LONG
+
+ANALYSIS_SESSION_TIME:  08-29-2026 15:50:04.0650
+
+ANALYSIS_VERSION: 10.0.17763.132 amd64fre
+
+MANAGED_CODE: 1
+
+MANAGED_ENGINE_MODULE:  clr
+
+MANAGED_ANALYSIS_PROVIDER:  SOS
+
+THREAD_ATTRIBUTES: 
+OS_LOCALE:  CHS
+
+ADDITIONAL_DEBUG_TEXT:  SOS.DLL is not loaded for managed code. Analysis might be incomplete
+
+BUGCHECK_STR:  APPLICATION_FAULT_INVALID_POINTER_READ_NOSOS
+
+DEFAULT_BUCKET_ID:  INVALID_POINTER_READ_NOSOS
+
+PRIMARY_PROBLEM_CLASS:  APPLICATION_FAULT
+
+PROBLEM_CLASSES: 
+
+    ID:     [0n313]
+    Type:   [@ACCESS_VIOLATION]
+    Class:  Addendum
+    Scope:  BUCKET_ID
+    Name:   Omit
+    Data:   Omit
+    PID:    [Unspecified]
+    TID:    [0x7b10]
+    Frame:  [0] : Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef
+
+    ID:     [0n285]
+    Type:   [INVALID_POINTER_READ]
+    Class:  Primary
+    Scope:  DEFAULT_BUCKET_ID (Failure Bucket ID prefix)
+            BUCKET_ID
+    Name:   Add
+    Data:   Omit
+    PID:    [Unspecified]
+    TID:    [0x7b10]
+    Frame:  [0] : Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef
+
+    ID:     [0n251]
+    Type:   [NOSOS]
+    Class:  Addendum
+    Scope:  DEFAULT_BUCKET_ID (Failure Bucket ID prefix)
+            BUCKET_ID
+    Name:   Add
+    Data:   Omit
+    PID:    [Unspecified]
+    TID:    [Unspecified]
+    Frame:  [0]
+
+LAST_CONTROL_TRANSFER:  from 00007ffacf762af9 to 00007ffacf7016b3
+
+STACK_TEXT:  
+000000f8`aebfee28 00007ffa`cf762af9 : 00000000`00000000 00000000`00000000 000002a2`23a78990 00007ffb`caa32d7b : Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+0x3
+000000f8`aebfee30 00007ffa`c408745f : 000002a2`1d753d80 00000000`00000001 000002a2`1d753d80 00007ffa`cfbdd7b8 : Qt5Core!QHashData::free_helper+0x49
+000000f8`aebfee70 00007ffa`c40879e4 : 000002a2`12130000 00007ffa`00000000 000002a2`239d9170 00000000`00000001 : Qt5Widgets!QTabBarPrivate::~QTabBarPrivate+0x3f
+000000f8`aebfeea0 00007ffa`cf8e5c40 : 000002a2`2372a1b0 00007ffa`cfbdd9d0 00000000`00000000 00000000`00000000 : Qt5Widgets!QTabBarPrivate::~QTabBarPrivate+0x5c4
+000000f8`aebfeed0 00007ffa`c40daab4 : 000002a2`2372a1b0 00000000`00000110 00000000`00000000 000002a2`1d753d80 : Qt5Core!QObject::~QObject+0x530
+000000f8`aebfefa0 00007ffa`cf8e90ab : 000002a2`23729fb0 000002a2`00000000 00000000`11cb1218 00000000`00000001 : Qt5Widgets!QTabBar::~QTabBar+0x194
+000000f8`aebfefe0 00007ffa`c3f81e00 : 00000000`11cb1218 00000000`11cb1218 00000000`00000000 000002a2`23729fb0 : Qt5Core!QObjectPrivate::deleteChildren+0x8b
+000000f8`aebff020 00007ff6`93b23715 : 00000000`00000000 00000000`00000000 00000000`00000001 000002a2`237299b0 : Qt5Widgets!QWidget::~QWidget+0x670
+000000f8`aebff0a0 00007ffa`cf8e90ab : 00000000`119e7098 000002a2`00000000 00000000`119e7098 000002a2`23729f01 : LTZK+0x3715
+000000f8`aebff0d0 00007ffa`c3f81e00 : 00000000`119e7098 00000000`119e7098 00000000`00000000 000002a2`237299b0 : Qt5Core!QObjectPrivate::deleteChildren+0x8b
+000000f8`aebff110 00007ff6`93b23455 : 000002a2`23bf6e20 00000000`00000000 00000000`00000001 000002a2`23bc7050 : Qt5Widgets!QWidget::~QWidget+0x670
+000000f8`aebff190 00007ffa`cf8e90ab : 00000000`11cbf318 000002a2`00000000 00000000`11cbf318 00000000`00000002 : LTZK+0x3455
+000000f8`aebff1c0 00007ffa`c3f81e00 : 00000000`11cbf318 00000000`11cbf318 00000000`00000000 000002a2`2395a880 : Qt5Core!QObjectPrivate::deleteChildren+0x8b
+000000f8`aebff200 00007ff6`93b29ea5 : 00000000`00000000 000002a2`238900e0 00000000`00000001 00000000`00000000 : Qt5Widgets!QWidget::~QWidget+0x670
+000000f8`aebff280 00007ffa`cf8e90ab : 00000000`00000018 000002a2`00000000 00000000`00000018 00000000`00000024 : LTZK+0x9ea5
+000000f8`aebff2b0 00007ffa`c3f81e00 : 00000000`00000018 00000000`00000018 00000000`00000000 000000f8`aebff490 : Qt5Core!QObjectPrivate::deleteChildren+0x8b
+000000f8`aebff2f0 00007ff6`93b45405 : 00000000`00000001 00000000`00000001 00000000`00000001 000002a2`121c73c0 : Qt5Widgets!QWidget::~QWidget+0x670
+000000f8`aebff370 00007ff6`93b4c697 : 00000000`00000000 00000000`00000000 00000000`00000000 000002a2`121c75c0 : LTZK+0x25405
+000000f8`aebff790 00007ff6`93b4bb42 : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : LTZK+0x2c697
+000000f8`aebff820 00007ffb`cbadccb7 : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : LTZK+0x2bb42
+000000f8`aebff860 00007ffb`cd10ad6c : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : kernel32!BaseThreadInitThunk+0x17
+000000f8`aebff890 00000000`00000000 : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+
+
+THREAD_SHA1_HASH_MOD_FUNC:  2136c05c0ac4cad4a6dec74f0f3489417e7c4835
+
+THREAD_SHA1_HASH_MOD_FUNC_OFFSET:  e5df246327a9952dca687de62dcae9f5194d46d2
+
+THREAD_SHA1_HASH_MOD:  210226a288867b18a991c61e993ef2a2de45c045
+
+FAULT_INSTR_CODE:  c085028b
+
+SYMBOL_STACK_INDEX:  0
+
+SYMBOL_NAME:  Qt5Core!QXmlStreamStringRef::~QXmlStreamStringRef+3
+
+FOLLOWUP_NAME:  MachineOwner
+
+MODULE_NAME: Qt5Core
+
+IMAGE_NAME:  Qt5Core.dll
+
+DEBUG_FLR_IMAGE_TIMESTAMP:  62ae0e19
+
+STACK_COMMAND:  ~0s ; .ecxr ; kb
+
+FAILURE_BUCKET_ID:  INVALID_POINTER_READ_NOSOS_c0000005_Qt5Core.dll!QXmlStreamStringRef::_QXmlStreamStringRef
+
+BUCKET_ID:  APPLICATION_FAULT_INVALID_POINTER_READ_NOSOS_Qt5Core!QXmlStreamStringRef::_QXmlStreamStringRef+3
+
+FAILURE_EXCEPTION_CODE:  c0000005
+
+FAILURE_IMAGE_NAME:  Qt5Core.dll
+
+BUCKET_ID_IMAGE_STR:  Qt5Core.dll
+
+FAILURE_MODULE_NAME:  Qt5Core
+
+BUCKET_ID_MODULE_STR:  Qt5Core
+
+FAILURE_FUNCTION_NAME:  QXmlStreamStringRef::_QXmlStreamStringRef
+
+BUCKET_ID_FUNCTION_STR:  QXmlStreamStringRef::_QXmlStreamStringRef
+
+BUCKET_ID_OFFSET:  3
+
+BUCKET_ID_MODTIMEDATESTAMP:  62ae0e19
+
+BUCKET_ID_MODCHECKSUM:  0
+
+BUCKET_ID_MODVER_STR:  5.15.3.0
+
+BUCKET_ID_PREFIX_STR:  APPLICATION_FAULT_INVALID_POINTER_READ_NOSOS_
+
+FAILURE_PROBLEM_CLASS:  APPLICATION_FAULT
+
+FAILURE_SYMBOL_NAME:  Qt5Core.dll!QXmlStreamStringRef::_QXmlStreamStringRef
+
+TARGET_TIME:  2026-08-28T12:51:01.000Z
+
+OSBUILD:  26200
+
+OSSERVICEPACK:  9168
+
+SERVICEPACK_NUMBER: 0
+
+OS_REVISION: 0
+
+OSPLATFORM_TYPE:  x64
+
+OSNAME:  Windows 10
+
+OSEDITION:  Windows 10 WinNt SingleUserTS Personal
+
+USER_LCID:  0
+
+OSBUILD_TIMESTAMP:  unknown_date
+
+BUILDDATESTAMP_STR:  240331-1435
+
+BUILDLAB_STR:  ge_release
+
+BUILDOSVER_STR:  10.0.26100.1.amd64fre.ge_release.240331-1435
+
+ANALYSIS_SESSION_ELAPSED_TIME:  2cd72
+
+ANALYSIS_SOURCE:  UM
+
+FAILURE_ID_HASH_STRING:  um:invalid_pointer_read_nosos_c0000005_qt5core.dll!qxmlstreamstringref::_qxmlstreamstringref
+
+FAILURE_ID_HASH:  {a5e2d586-9c1b-52cb-caf7-bc95a8216db0}
+
+Followup:     MachineOwner
+---------
+
+quit:
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\Visualizers\winrt.natvis'

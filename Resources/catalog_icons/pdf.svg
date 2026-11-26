@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 2.8h9.2l4.8 4.8V20c0 .7-.6 1.2-1.2 1.2H5c-.7 0-1.2-.5-1.2-1.2V4c0-.7.5-1.2 1.2-1.2Z" fill="#C74045" fill-opacity=".11" stroke="#C74045" stroke-width="1.6"/><path d="M14.2 2.8v4.8H19" fill="none" stroke="#C74045" stroke-width="1.6"/><rect x="4.2" y="12.2" width="16.8" height="6.1" rx="1" fill="#C74045"/><text x="5.4" y="16.8" font-family="Arial,sans-serif" font-size="5.3" font-weight="700" fill="#FFFFFF">PDF</text>
+</g>
+</svg>

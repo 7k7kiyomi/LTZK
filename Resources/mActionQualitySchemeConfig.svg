@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 质检方案配置 -->
+  <path d="M6 4h8l4 4v12H6z" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M14 4v4h4M9 11h6M9 14h4" stroke="#4A90D9" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="16.5" cy="16.5" r="2.7" fill="none" stroke="#F6BD16" stroke-width="1.4"/>
+  <path d="M16.5 14.8v3.4M14.8 16.5h3.4" stroke="#61DDAA" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

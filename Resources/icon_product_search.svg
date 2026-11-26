@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 成果检索与预览 - 搜索放大镜+眼睛预览图标 -->
+  <circle cx="10" cy="10" r="6" fill="none" stroke="#5D7092" stroke-width="1.5"/>
+  <line x1="14.5" y1="14.5" x2="19" y2="19" stroke="#5D7092" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="10" cy="10" r="3" fill="none" stroke="#F6BD16" stroke-width="1"/>
+  <circle cx="10" cy="10" r="1" fill="#F6BD16"/>
+</svg>

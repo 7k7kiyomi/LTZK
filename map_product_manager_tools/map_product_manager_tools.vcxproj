@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8F9A1C2-3D4E-5F6A-7B8C-9D0E1F2A3B4C}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>qtmsbuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QTDIR>F:\Qt\5.15.1\msvc2019_64</QTDIR>
+    <QtInstall>5.15.1_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets;sql;printsupport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QTDIR>E:\extern\OSGeo4W_32815\apps\Qt5</QTDIR>
+    <QTDIR_OSGEO4W>E:\extern\OSGeo4W_32815\apps\Qt5</QTDIR_OSGEO4W>
+    <QtInstall>E:\extern\OSGeo4W_32815\apps\Qt5</QtInstall>
+    <!-- OSGeo4W's qt.conf requires its environment to be initialized before qmake runs. -->
+    <QtToolsPath>$(MSBuildProjectDirectory)</QtToolsPath>
+    <QtModules>core;gui;widgets;sql;printsupport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.0.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>E:\AAALTZK\plugins\</OutDir>
+    <IntDir>$(ProjectDir)\GeneratedFiles\Release\</IntDir>
+    <TargetName>map_product_manager_tools</TargetName>
+    <IncludePath>E:\extern\OSGeo4W_32815\include;E:\extern\OSGeo4W_32815\apps\Qt5\include;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtPrintSupport;E:\extern\QGIS_32815\include;E:\extern\OSGeo4W_32815\include\libxml2;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\extern\OSGeo4W_32815\apps\Qt5\lib;E:\extern\OSGeo4W_32815\lib;E:\extern\QGIS_32815\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>D:\GarMap\garmap_release\winx64_vc16\obj\plugins\</OutDir>
+    <IntDir>$(ProjectDir)\GeneratedFiles\Debug\</IntDir>
+    <TargetName>map_product_manager_tools</TargetName>
+    <IncludePath>F:\extern\OSGeo4W_32815\include;F:\extern\OSGeo4W_32815\apps\Qt5\include;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtPrintSupport;F:\extern\QGIS_32815\include;F:\extern\OSGeo4W_32815\include\libxml2;F:\extern\QGIS_32815_CORE_INCLUDE\core;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\extern\OSGeo4W_32815\apps\Qt5\lib;F:\extern\OSGeo4W_32815\lib;F:\extern\QGIS_32815\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)database;$(ProjectDir)core;$(ProjectDir)ui_class;$(ProjectDir)GeneratedFiles\Release;E:\extern\OSGeo4W_32815\include;E:\extern\OSGeo4W_32815\apps\Qt5\include;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;E:\extern\QGIS_32815\include;E:\extern\OSGeo4W_32815\include\libxml2;E:\extern\spdlog-1.x\include;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtPrintSupport;E:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;QT_NO_DEBUG;QT_NO_CAST_TO_ASCII;NOMINMAX;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x050800;QT_USE_QSTRINGBUILDER;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4819;4091;4100;4127;4190;4231;4244;4251;4267;4275;4290;4456;4457;4458;4505;4510;4512;4610;4706;4714;4800;4996;4828;4474</DisableSpecificWarnings>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\extern\OSGeo4W_32815\apps\Qt5\lib;E:\extern\OSGeo4W_32815\lib;E:\extern\QGIS_32815\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Sql.lib;Qt5PrintSupport.lib;qgis_core.lib;qgis_gui.lib;SetupAPI.Lib;Version.Lib;Qt5Xml.lib;Qt5Svg.lib;qgis_native.lib;gdal_i.lib;sqlite3_i.lib;libxml2.lib;libpq.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>1073741824</StackReserveSize>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)database;$(ProjectDir)core;$(ProjectDir)ui_class;$(ProjectDir)GeneratedFiles\Debug;F:\extern\OSGeo4W_32815\include;F:\extern\OSGeo4W_32815\apps\Qt5\include;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtCore;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtGui;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtXml;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtWidgets;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtSvg;F:\extern\QGIS_32815\include;F:\extern\OSGeo4W_32815\include\libxml2;F:\extern\spdlog-1.x\include;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtNetwork;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtPrintSupport;F:\extern\OSGeo4W_32815\apps\Qt5\include\QtSql;F:\extern\QGIS_32815_CORE_INCLUDE\core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;QT_NO_CAST_TO_ASCII;NOMINMAX;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x050800;QT_USE_QSTRINGBUILDER;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4819;4091;4100;4127;4190;4231;4244;4251;4267;4275;4290;4456;4457;4458;4505;4510;4512;4610;4706;4714;4800;4996;4828</DisableSpecificWarnings>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>F:\extern\OSGeo4W_32815\apps\Qt5\lib;F:\extern\OSGeo4W_32815\lib;D:\GarMap\mapscloud_release\winx64_vc16\lib\debug;F:\extern\QGIS_32815\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Sqld.lib;Qt5PrintSupportd.lib;qgis_core.lib;qgis_gui.lib;SetupAPI.Lib;Version.Lib;Qt5Xmld.lib;Qt5Svgd.lib;qgis_native.lib;gdal_i.lib;sqlite3_i.lib;libxml2.lib;libpq.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>1073741824</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- ==================== UIC 编译 .ui 文件 ==================== -->
+  <ItemGroup>
+    <CustomBuild Include="ui_class\db_config_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_storage_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\range_export.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\main_area_clip.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\metadata_manager_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_search_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\version_diff_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\login_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\access_control_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\map_service_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\service_record_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\gdb_layer_selector_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\dynamic_statistics_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_manager_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_add_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_content_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_assign_dialog.ui">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Release\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\uic.exe "%(FullPath)" -o ".\GeneratedFiles\Debug\ui_%(Filename).h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <!-- ==================== QRC 资源文件 ==================== -->
+  <ItemGroup>
+    <CustomBuild Include="map_product_manager_tools.qrc">
+      <FileType>Document</FileType>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\Release\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\extern\OSGeo4W_32815\apps\Qt5\bin\rcc.exe -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\Release\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc'ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\Debug\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\extern\OSGeo4W_32815\apps\Qt5\bin\rcc.exe -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\Debug\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <!-- ==================== MOC 生成（包含Q_OBJECT的头文件） ==================== -->
+  <ItemGroup>
+    <CustomBuild Include="map_product_manager_tools.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="database\postgis_connector.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="database\product_dao.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="database\schema_manager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="core\metadata_extractor.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="core\file_storage_manager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="core\data_importer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc'ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_storage_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\se_range_export.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\se_main_area_clip.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\metadata_manager_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\product_search_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\version_diff_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\login_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\access_control_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\db_config_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\map_service_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\chart_widget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\service_record_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="database\service_dao.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\gdb_layer_selector_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\dynamic_statistics_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\data_import_wizard.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="database\theme_dao.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_manager_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_add_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_content_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="ui_class\theme_assign_dialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR_OSGEO4W)\bin\moc.exe"  "%(FullPath)"  -o  ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR_OSGEO4W)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <!-- ==================== 源文件 ==================== -->
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Release\moc_access_control_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_db_config_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_map_product_manager_tools.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_metadata_manager_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_product_search_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_product_storage_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_se_range_export.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_se_main_area_clip.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_version_diff_dialog.cpp" />
+    <ClCompile Include="map_product_manager_tools.cpp" />
+    <ClCompile Include="database\postgis_connector.cpp" />
+    <ClCompile Include="database\product_metadata.cpp" />
+    <ClCompile Include="database\product_dao.cpp" />
+    <ClCompile Include="database\schema_manager.cpp" />
+    <ClCompile Include="core\metadata_extractor.cpp" />
+    <ClCompile Include="core\file_storage_manager.cpp" />
+    <ClCompile Include="core\data_importer.cpp" />
+    <ClCompile Include="core\calendar_helper.cpp" />
+    <ClCompile Include="core\xlsx_writer.cpp" />
+    <ClCompile Include="core\xlsx_template_filler.cpp" />
+    <ClCompile Include="core\price_config.cpp" />
+    <ClCompile Include="core\unit_manager.cpp" />
+    <ClCompile Include="core\map_product_clip_engine.cpp" />
+    <ClCompile Include="ui_class\product_storage_dialog.cpp" />
+    <ClCompile Include="ui_class\se_range_export.cpp" />
+    <ClCompile Include="ui_class\se_main_area_clip.cpp" />
+    <ClCompile Include="ui_class\map_extent_draw_tool.cpp" />
+    <ClCompile Include="ui_class\metadata_manager_dialog.cpp" />
+    <ClCompile Include="ui_class\product_search_dialog.cpp" />
+    <ClCompile Include="ui_class\version_diff_dialog.cpp" />
+    <ClCompile Include="ui_class\access_control_dialog.cpp" />
+    <ClCompile Include="ui_class\db_config_dialog.cpp" />
+    <ClCompile Include="ui_class\map_service_dialog.cpp" />
+    <ClCompile Include="ui_class\chart_widget.cpp" />
+    <ClCompile Include="ui_class\service_record_dialog.cpp" />
+    <ClCompile Include="ui_class\gdb_layer_selector_dialog.cpp" />
+    <ClCompile Include="ui_class\login_dialog.cpp" />
+    <ClCompile Include="ui_class\dynamic_statistics_dialog.cpp" />
+    <ClCompile Include="ui_class\data_import_wizard.cpp" />
+    <ClCompile Include="database\service_dao.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_postgis_connector.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_product_dao.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_schema_manager.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_metadata_extractor.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_file_storage_manager.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_data_importer.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_map_service_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_chart_widget.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_service_record_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_service_dao.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_gdb_layer_selector_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_login_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_dynamic_statistics_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_data_import_wizard.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_dao.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_manager_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_add_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_content_dialog.cpp" />
+    <ClCompile Include="database\theme_dao.cpp" />
+    <ClCompile Include="ui_class\theme_manager_dialog.cpp" />
+    <ClCompile Include="ui_class\theme_add_dialog.cpp" />
+    <ClCompile Include="ui_class\theme_content_dialog.cpp" />
+    <ClCompile Include="ui_class\theme_assign_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_theme_assign_dialog.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\qrc_map_product_manager_tools.cpp" />
+    <ClCompile Include="product_catalog_plugin_api.cpp" />
+  </ItemGroup>
+  <!-- ==================== 头文件 ==================== -->
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\Release\ui_access_control_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_db_config_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_metadata_manager_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_product_search_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_product_storage_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_range_export.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_main_area_clip.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_version_diff_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_map_service_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_service_record_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_gdb_layer_selector_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_login_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_dynamic_statistics_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_manager_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_add_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_content_dialog.h" />
+    <ClInclude Include="GeneratedFiles\Release\ui_theme_assign_dialog.h" />
+    <ClInclude Include="qgisplugin.h" />
+    <ClInclude Include="database\product_metadata.h" />
+    <ClInclude Include="database\service_record.h" />
+    <ClInclude Include="database\theme_record.h" />
+    <ClInclude Include="core\map_product_clip_engine.h" />
+    <ClInclude Include="core\unit_manager.h" />
+    <ClInclude Include="ui_class\map_extent_draw_tool.h" />
+    <ClInclude Include="core\user_info_bar.h" />
+    <ClInclude Include="core\xlsx_template_filler.h" />
+    <ClInclude Include="core\price_config.h" />
+    <ClInclude Include="core\zip_packer.h" />
+    <ClInclude Include="..\product_catalog_plugin_api.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

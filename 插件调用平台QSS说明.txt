@@ -1,0 +1,131 @@
+﻿陇图智控平台 DLL 插件调用 QSS 样式说明
+
+一、QSS 文件位置
+
+平台统一科幻风格 QSS 文件位于程序运行目录：
+
+Resources/styles/ltzk_sci_fi.qss
+
+例如平台 EXE 位于：
+
+E:/AAALTZK/x64/Debug/LTZK.exe
+
+则插件可按以下相对路径查找：
+
+E:/AAALTZK/x64/Debug/Resources/styles/ltzk_sci_fi.qss
+
+平台内部也已将该 QSS 注册到 Qt 资源：
+
+:/LTZK/Resources/styles/ltzk_sci_fi.qss
+
+
+二、正常情况下插件不需要额外处理
+
+平台启动后会统一执行全局样式设置：
+
+qApp->setStyleSheet(platformStyleSheet());
+
+因此 DLL 插件创建的普通 Qt 控件、QDialog、QWidget 顶层窗口，通常会自动继承平台科幻风格。
+
+如果插件窗口没有显示为科幻风格，常见原因是插件自身调用了 setStyleSheet()，覆盖了平台全局样式。
+
+
+三、推荐调用方式：直接复用 qApp 全局样式
+
+插件弹窗创建后，可直接使用当前应用的全局样式：
+
+#include <QApplication>
+#include <QDialog>
+
+QDialog* dialog = new QDialog(parent);
+dialog->setStyleSheet(qApp->styleSheet());
+dialog->show();
+
+这种方式最简单，推荐优先使用。
+
+
+四、直接读取平台 QSS 文件
+
+如果插件需要主动读取 QSS 文件，可使用以下方式：
+
+#include <QApplication>
+#include <QCoreApplication>
+#include <QDir>
+#include <QFile>
+
+QString loadLtzKPlatformQss()
+{
+    const QString qssPath =
+        QDir(QCoreApplication::applicationDirPath())
+            .filePath("Resources/styles/ltzk_sci_fi.qss");
+
+    QFile file(qssPath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        return qApp->styleSheet();
+    }
+
+    return QString::fromUtf8(file.readAll());
+}
+
+// 使用示例
+QDialog* dialog = new QDialog(parent);
+dialog->setStyleSheet(loadLtzKPlatformQss());
+dialog->show();
+
+
+五、插件控件复用平台选择器约定
+
+插件中的特殊控件如需复用平台已有样式，可设置 objectName 或 Qt 属性。
+
+标题样式：
+
+titleLabel->setObjectName("dashboardTitle");
+
+普通面板标题：
+
+panelTitleLabel->setProperty("panelTitle", true);
+
+主面板标题：
+
+primaryTitleLabel->setProperty("primaryPanelTitle", true);
+
+顶部工具按钮：
+
+toolButton->setProperty("topBarTool", true);
+
+这些选择器已在 Resources/styles/ltzk_sci_fi.qss 中定义。
+
+
+六、注意事项
+
+1. 插件如果调用 widget->setStyleSheet("...")，会覆盖平台全局 QSS。
+
+2. 如果必须设置插件自己的局部样式，建议在平台 QSS 基础上追加：
+
+QString style = qApp->styleSheet();
+style += "QLabel#myPluginStatusLabel { color: #ffb238; }";
+widget->setStyleSheet(style);
+
+3. 建议把 QSS 设置到插件顶层窗口，例如 QDialog 或 QWidget，而不是只设置到某一个子控件。
+
+4. 插件窗口在 show() 前或 show() 后设置样式均可。若窗口显示后样式未刷新，可调用：
+
+widget->style()->unpolish(widget);
+widget->style()->polish(widget);
+widget->update();
+
+5. 平台已对插件顶层窗口做事件过滤处理，窗口 Show、Polish、WinIdChange 时会尝试自动补应用平台科幻样式。
+
+
+七、补充
+插件弹窗若未继承平台科幻主题，请在窗口创建后调用：
+
+widget->setStyleSheet(qApp->styleSheet());
+
+或读取程序运行目录下：
+
+Resources/styles/ltzk_sci_fi.qss
+
+并设置到插件顶层窗口。插件自定义 setStyleSheet() 会覆盖平台全局样式。
+

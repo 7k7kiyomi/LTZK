@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- 地图整饰配置 -->
+  <rect x="4" y="4" width="16" height="16" rx="1.5" fill="none" stroke="#4A90D9" stroke-width="1.5"/>
+  <path d="M8 4v16M4 9h16M13 13h4" stroke="#4A90D9" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="16.5" cy="16.5" r="2" fill="none" stroke="#F6BD16" stroke-width="1.4"/>
+  <path d="M16.5 14.5v4M14.5 16.5h4" stroke="#61DDAA" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

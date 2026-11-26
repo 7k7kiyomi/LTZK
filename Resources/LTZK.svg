@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img">
+  <title>LTZK simple GIS control icon</title>
+  <defs>
+    <linearGradient id="pinFill" x1="256" y1="160" x2="768" y2="864" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F3558"/>
+      <stop offset="1" stop-color="#124E78"/>
+    </linearGradient>
+    <linearGradient id="accentFill" x1="344" y1="288" x2="680" y2="704" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#20C7B5"/>
+      <stop offset="1" stop-color="#139C9A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1024" height="1024" rx="176" fill="#F7FAFC"/>
+
+  <path
+    d="M512 132C368.5 132 252 248.5 252 392c0 184.5 211.5 401.3 245.3 434.8a20.6 20.6 0 0 0 29.4 0C560.5 793.3 772 576.5 772 392c0-143.5-116.5-260-260-260Zm0 96c90.6 0 164 73.4 164 164S602.6 556 512 556s-164-73.4-164-164 73.4-164 164-164Z"
+    fill="url(#pinFill)"/>
+
+  <g fill="none" stroke="#DDE7EE" stroke-width="24" stroke-linecap="round">
+    <path d="M400 382h224"/>
+    <path d="M512 270v244"/>
+    <path d="M430 310c49 28 115 28 164 0"/>
+    <path d="M430 474c49-28 115-28 164 0"/>
+  </g>
+
+  <path
+    d="M386 430 478 366l86 54 78-86"
+    fill="none"
+    stroke="url(#accentFill)"
+    stroke-width="42"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <circle cx="386" cy="430" r="35" fill="#20C7B5" stroke="#F7FAFC" stroke-width="18"/>
+  <circle cx="564" cy="420" r="35" fill="#20C7B5" stroke="#F7FAFC" stroke-width="18"/>
+  <circle cx="642" cy="334" r="35" fill="#20C7B5" stroke="#F7FAFC" stroke-width="18"/>
+</svg>
